@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.mycompany.gamepoo;
+import Pieces.*;
 
 /**
  *
@@ -10,6 +11,7 @@ package com.mycompany.gamepoo;
  */
 public class TabuleiroRandom extends javax.swing.JFrame {
 
+     
     /**
      * Creates new form Tabuleiro
      */
@@ -17,6 +19,17 @@ public class TabuleiroRandom extends javax.swing.JFrame {
         initComponents();
     }
 
+    Bandeira b = new Bandeira();
+    Bomba b1 = new Bomba();
+    Bomba b2 = new Bomba();
+    Espião p = new Espião();
+    Soldado s1 = new Soldado();
+    Soldado s2 = new Soldado();
+    Soldado s3 = new Soldado();
+    Armeiro a1 = new Armeiro();
+    Armeiro a2 = new Armeiro();
+    Marechal m = new Marechal();
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

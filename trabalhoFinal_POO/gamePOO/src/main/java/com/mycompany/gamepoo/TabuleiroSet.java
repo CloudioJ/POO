@@ -4,8 +4,10 @@
  */
 package com.mycompany.gamepoo;
 
+import Pieces.*;
 import javax.swing.ImageIcon;
-import javax.swing.JOptionPane;
+import java.util.LinkedList;
+import javax.swing.JDialog;
 
 /**
  *
@@ -20,6 +22,18 @@ public class TabuleiroSet extends javax.swing.JFrame {
         initComponents();
     }
 
+    private Peças bandeira = new Bandeira();
+    private Peças bomba1 = new Bomba();
+    private Peças bomba2 = new Bomba();
+    private Peças espiao = new Espião();
+    private Peças soldado1 = new Soldado();
+    private Peças soldado2 = new Soldado();
+    private Peças soldado3 = new Soldado();
+    private Peças armeiro1 = new Armeiro();
+    private Peças armeiro2 = new Armeiro();
+    private Peças marechal = new Marechal();
+    private LinkedList<javax.swing.JButton> botaoDoTabuleiro = new LinkedList<>();
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -29,7 +43,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        PanelTabuleiro = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -54,25 +68,55 @@ public class TabuleiroSet extends javax.swing.JFrame {
         Buttom8Red = new javax.swing.JButton();
         Buttom9Red = new javax.swing.JButton();
         Buttom10Red = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
-        jButton25 = new javax.swing.JButton();
+        PanelBandeira = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        ComboBandeira = new javax.swing.JComboBox<>();
-        jLabel4 = new javax.swing.JLabel();
-        ComboBombas = new javax.swing.JComboBox<>();
-        jLabel5 = new javax.swing.JLabel();
-        Combo1s = new javax.swing.JComboBox<>();
-        jLabel6 = new javax.swing.JLabel();
-        Combo2s = new javax.swing.JComboBox<>();
-        jLabel7 = new javax.swing.JLabel();
-        Combo3s = new javax.swing.JComboBox<>();
-        jLabel8 = new javax.swing.JLabel();
-        Combo10s = new javax.swing.JComboBox<>();
+        comboBandeira = new javax.swing.JComboBox<>();
+        botaoBandeira = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jButton26 = new javax.swing.JButton();
+        botaoDebug = new javax.swing.JButton();
+        readyButton = new javax.swing.JButton();
+        PainelBombas = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        comboBomba1 = new javax.swing.JComboBox<>();
+        botaoBomba1 = new javax.swing.JButton();
+        botaoBomba2 = new javax.swing.JButton();
+        comboBomba2 = new javax.swing.JComboBox<>();
+        Painel1s = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        comboEspiao1s = new javax.swing.JComboBox<>();
+        botaoEspiao1s = new javax.swing.JButton();
+        Painel2s = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        botaoSoldado2s1 = new javax.swing.JButton();
+        comboSoldado2s1 = new javax.swing.JComboBox<>();
+        botaoSoldado2s3 = new javax.swing.JButton();
+        comboSoldado2s3 = new javax.swing.JComboBox<>();
+        botaoSoldado2s2 = new javax.swing.JButton();
+        comboSoldado2s2 = new javax.swing.JComboBox<>();
+        Painel3s = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        botaoDefuse3s1 = new javax.swing.JButton();
+        comboDefuse3s1 = new javax.swing.JComboBox<>();
+        botaoDefuse3s2 = new javax.swing.JButton();
+        comboDefuse3s2 = new javax.swing.JComboBox<>();
+        Painel10s = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        comboMarechal10 = new javax.swing.JComboBox<>();
+        botaoMarechal10 = new javax.swing.JButton();
+        limparTabuleiro = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        PanelTabuleiro.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, java.awt.Color.black));
 
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,46 +124,48 @@ public class TabuleiroSet extends javax.swing.JFrame {
             }
         });
 
-        Buttom1Red.addActionListener(new java.awt.event.ActionListener() {
+        Buttom1Red.setName(""); // NOI18N
+
+        Buttom6Red.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Buttom1RedActionPerformed(evt);
+                Buttom6RedActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout PanelTabuleiroLayout = new javax.swing.GroupLayout(PanelTabuleiro);
+        PanelTabuleiro.setLayout(PanelTabuleiroLayout);
+        PanelTabuleiroLayout.setHorizontalGroup(
+            PanelTabuleiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelTabuleiroLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                .addGroup(PanelTabuleiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(Buttom6Red, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE)
                     .addComponent(Buttom1Red, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(PanelTabuleiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Buttom2Red, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Buttom7Red, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(PanelTabuleiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Buttom3Red, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Buttom8Red, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(PanelTabuleiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Buttom4Red, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Buttom9Red, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE)
                     .addComponent(jButton13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(PanelTabuleiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Buttom5Red, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -127,147 +173,87 @@ public class TabuleiroSet extends javax.swing.JFrame {
                     .addComponent(jButton14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        PanelTabuleiroLayout.setVerticalGroup(
+            PanelTabuleiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelTabuleiroLayout.createSequentialGroup()
                 .addGap(15, 15, 15)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(PanelTabuleiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(PanelTabuleiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(PanelTabuleiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButton14, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE)
                     .addComponent(jButton13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(PanelTabuleiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(Buttom3Red, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Buttom1Red, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Buttom2Red, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Buttom4Red, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Buttom5Red, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(PanelTabuleiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(Buttom6Red, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Buttom7Red, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Buttom8Red, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Buttom9Red, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(Buttom10Red, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE))
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jButton25.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButton25.setText("Debug");
+        PanelBandeira.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, java.awt.Color.black));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel3.setText("Bandeira");
 
-        ComboBandeira.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "Casa 1", "Casa 2", "Casa 3", "Casa 4", "Casa 5", "Casa 6", "Casa 7", "Casa 8", "Casa 9", "Casa 10" }));
-        ComboBandeira.addActionListener(new java.awt.event.ActionListener() {
+        comboBandeira.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "a1", "a2", "a3", "a4", "a5", "b1", "b2", "b3", "b4", "b5" }));
+        comboBandeira.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ComboBandeiraActionPerformed(evt);
+                comboBandeiraActionPerformed(evt);
             }
         });
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel4.setText("Bombas");
-
-        ComboBombas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "Casa 1", "Casa 2", "Casa 3", "Casa 4", "Casa 5", "Casa 6", "Casa 7", "Casa 8", "Casa 9", "Casa 10" }));
-        ComboBombas.addActionListener(new java.awt.event.ActionListener() {
+        botaoBandeira.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Bandeira.png"))); // NOI18N
+        botaoBandeira.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ComboBombasActionPerformed(evt);
+                botaoBandeiraActionPerformed(evt);
             }
         });
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel5.setText("1s");
-
-        Combo1s.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "Casa 1", "Casa 2", "Casa 3", "Casa 4", "Casa 5", "Casa 6", "Casa 7", "Casa 8", "Casa 9", "Casa 10" }));
-
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel6.setText("2s");
-
-        Combo2s.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "Casa 1", "Casa 2", "Casa 3", "Casa 4", "Casa 5", "Casa 6", "Casa 7", "Casa 8", "Casa 9", "Casa 10" }));
-
-        jLabel7.setText("3s");
-
-        Combo3s.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        jLabel8.setText("10s");
-
-        Combo10s.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton25))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ComboBandeira, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel6)
-                            .addComponent(Combo2s, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(64, 64, 64)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4)
-                            .addComponent(ComboBombas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel7)
-                            .addComponent(Combo3s, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 9, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Combo1s, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel8))
-                        .addGap(7, 7, 7))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                        .addComponent(Combo10s, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout PanelBandeiraLayout = new javax.swing.GroupLayout(PanelBandeira);
+        PanelBandeira.setLayout(PanelBandeiraLayout);
+        PanelBandeiraLayout.setHorizontalGroup(
+            PanelBandeiraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelBandeiraLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton25)
-                .addGap(53, 53, 53)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(PanelBandeiraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(comboBandeira, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botaoBandeira))
+                .addContainerGap(14, Short.MAX_VALUE))
+        );
+        PanelBandeiraLayout.setVerticalGroup(
+            PanelBandeiraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PanelBandeiraLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(PanelBandeiraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5))
+                    .addComponent(botaoBandeira))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ComboBandeira, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ComboBombas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Combo1s, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(59, 59, 59)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel8))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Combo2s, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Combo3s, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Combo10s, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(comboBandeira, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -285,40 +271,455 @@ public class TabuleiroSet extends javax.swing.JFrame {
             }
         });
 
+        botaoDebug.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        botaoDebug.setText("Debug");
+
+        readyButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        readyButton.setText("Ready");
+        readyButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                readyButtonActionPerformed(evt);
+            }
+        });
+
+        PainelBombas.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, java.awt.Color.black));
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel4.setText("Bombas");
+
+        comboBomba1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "a1", "a2", "a3", "a4", "a5", "b1", "b2", "b3", "b4", "b5" }));
+        comboBomba1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboBomba1ActionPerformed(evt);
+            }
+        });
+
+        botaoBomba1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Bomba.png"))); // NOI18N
+        botaoBomba1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoBomba1ActionPerformed(evt);
+            }
+        });
+
+        botaoBomba2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Bomba.png"))); // NOI18N
+        botaoBomba2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoBomba2ActionPerformed(evt);
+            }
+        });
+
+        comboBomba2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "a1", "a2", "a3", "a4", "a5", "b1", "b2", "b3", "b4", "b5" }));
+        comboBomba2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboBomba2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout PainelBombasLayout = new javax.swing.GroupLayout(PainelBombas);
+        PainelBombas.setLayout(PainelBombasLayout);
+        PainelBombasLayout.setHorizontalGroup(
+            PainelBombasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PainelBombasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(PainelBombasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(botaoBomba1)
+                    .addComponent(comboBomba1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(PainelBombasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(botaoBomba2)
+                    .addComponent(comboBomba2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(36, 36, 36))
+        );
+        PainelBombasLayout.setVerticalGroup(
+            PainelBombasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PainelBombasLayout.createSequentialGroup()
+                .addGroup(PainelBombasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4)
+                    .addGroup(PainelBombasLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(PainelBombasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(botaoBomba2)
+                            .addComponent(botaoBomba1))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(PainelBombasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(comboBomba2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(comboBomba1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+        );
+
+        Painel1s.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, java.awt.Color.black));
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel5.setText("1s");
+
+        comboEspiao1s.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "a1", "a2", "a3", "a4", "a5", "b1", "b2", "b3", "b4", "b5" }));
+        comboEspiao1s.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboEspiao1sActionPerformed(evt);
+            }
+        });
+
+        botaoEspiao1s.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Espião.png"))); // NOI18N
+        botaoEspiao1s.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoEspiao1sActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout Painel1sLayout = new javax.swing.GroupLayout(Painel1s);
+        Painel1s.setLayout(Painel1sLayout);
+        Painel1sLayout.setHorizontalGroup(
+            Painel1sLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Painel1sLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
+                .addGroup(Painel1sLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(botaoEspiao1s, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(comboEspiao1s, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+        Painel1sLayout.setVerticalGroup(
+            Painel1sLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Painel1sLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addGroup(Painel1sLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(botaoEspiao1s)
+                    .addComponent(jLabel5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
+                .addComponent(comboEspiao1s, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        Painel2s.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, java.awt.Color.black));
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel6.setText("2s");
+
+        botaoSoldado2s1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Soldado.png"))); // NOI18N
+        botaoSoldado2s1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoSoldado2s1ActionPerformed(evt);
+            }
+        });
+
+        comboSoldado2s1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "a1", "a2", "a3", "a4", "a5", "b1", "b2", "b3", "b4", "b5" }));
+        comboSoldado2s1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboSoldado2s1ActionPerformed(evt);
+            }
+        });
+
+        botaoSoldado2s3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Soldado.png"))); // NOI18N
+        botaoSoldado2s3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoSoldado2s3ActionPerformed(evt);
+            }
+        });
+
+        comboSoldado2s3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "a1", "a2", "a3", "a4", "a5", "b1", "b2", "b3", "b4", "b5" }));
+        comboSoldado2s3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboSoldado2s3ActionPerformed(evt);
+            }
+        });
+
+        botaoSoldado2s2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Soldado.png"))); // NOI18N
+        botaoSoldado2s2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoSoldado2s2ActionPerformed(evt);
+            }
+        });
+
+        comboSoldado2s2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "a1", "a2", "a3", "a4", "a5", "b1", "b2", "b3", "b4", "b5" }));
+        comboSoldado2s2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboSoldado2s2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout Painel2sLayout = new javax.swing.GroupLayout(Painel2s);
+        Painel2s.setLayout(Painel2sLayout);
+        Painel2sLayout.setHorizontalGroup(
+            Painel2sLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Painel2sLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
+                .addGroup(Painel2sLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(comboSoldado2s1, 0, 1, Short.MAX_VALUE)
+                    .addComponent(botaoSoldado2s1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(Painel2sLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(botaoSoldado2s2)
+                    .addComponent(comboSoldado2s2, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(Painel2sLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(botaoSoldado2s3)
+                    .addComponent(comboSoldado2s3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(35, 35, 35))
+        );
+        Painel2sLayout.setVerticalGroup(
+            Painel2sLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Painel2sLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(Painel2sLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel6)
+                    .addComponent(botaoSoldado2s1)
+                    .addComponent(botaoSoldado2s3)
+                    .addComponent(botaoSoldado2s2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(Painel2sLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(comboSoldado2s1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(comboSoldado2s2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(comboSoldado2s3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(12, Short.MAX_VALUE))
+        );
+
+        Painel3s.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, java.awt.Color.black));
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel7.setText("3s");
+
+        botaoDefuse3s1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Armeiro.png"))); // NOI18N
+        botaoDefuse3s1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoDefuse3s1ActionPerformed(evt);
+            }
+        });
+
+        comboDefuse3s1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "a1", "a2", "a3", "a4", "a5", "b1", "b2", "b3", "b4", "b5" }));
+        comboDefuse3s1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboDefuse3s1ActionPerformed(evt);
+            }
+        });
+
+        botaoDefuse3s2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Armeiro.png"))); // NOI18N
+        botaoDefuse3s2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoDefuse3s2ActionPerformed(evt);
+            }
+        });
+
+        comboDefuse3s2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "a1", "a2", "a3", "a4", "a5", "b1", "b2", "b3", "b4", "b5" }));
+        comboDefuse3s2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboDefuse3s2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout Painel3sLayout = new javax.swing.GroupLayout(Painel3s);
+        Painel3s.setLayout(Painel3sLayout);
+        Painel3sLayout.setHorizontalGroup(
+            Painel3sLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Painel3sLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(43, 43, 43)
+                .addGroup(Painel3sLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(comboDefuse3s1, 0, 0, Short.MAX_VALUE)
+                    .addComponent(botaoDefuse3s1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(Painel3sLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(botaoDefuse3s2)
+                    .addComponent(comboDefuse3s2, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(39, 39, 39))
+        );
+        Painel3sLayout.setVerticalGroup(
+            Painel3sLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Painel3sLayout.createSequentialGroup()
+                .addComponent(jLabel7)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(Painel3sLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(Painel3sLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(botaoDefuse3s1)
+                    .addComponent(botaoDefuse3s2))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(Painel3sLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(comboDefuse3s2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(comboDefuse3s1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(19, Short.MAX_VALUE))
+        );
+
+        Painel10s.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, java.awt.Color.black));
+
+        jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel8.setText("10s");
+
+        comboMarechal10.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "a1", "a2", "a3", "a4", "a5", "b1", "b2", "b3", "b4", "b5" }));
+        comboMarechal10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboMarechal10ActionPerformed(evt);
+            }
+        });
+
+        botaoMarechal10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Marechal.png"))); // NOI18N
+        botaoMarechal10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botaoMarechal10ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout Painel10sLayout = new javax.swing.GroupLayout(Painel10s);
+        Painel10s.setLayout(Painel10sLayout);
+        Painel10sLayout.setHorizontalGroup(
+            Painel10sLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Painel10sLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addGroup(Painel10sLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(comboMarechal10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botaoMarechal10))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        Painel10sLayout.setVerticalGroup(
+            Painel10sLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Painel10sLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(Painel10sLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(botaoMarechal10)
+                    .addComponent(jLabel8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(comboMarechal10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(9, Short.MAX_VALUE))
+        );
+
+        limparTabuleiro.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        limparTabuleiro.setText("Clear");
+        limparTabuleiro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                limparTabuleiroActionPerformed(evt);
+            }
+        });
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        jLabel9.setText("A");
+
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        jLabel10.setText("B");
+
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        jLabel11.setText("1");
+
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        jLabel12.setText("2");
+
+        jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        jLabel13.setText("3");
+
+        jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        jLabel14.setText("4");
+
+        jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        jLabel15.setText("5");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(28, 28, 28)
+                                .addComponent(jLabel9))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel10)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(47, 47, 47)
+                                .addComponent(jLabel11)
+                                .addGap(82, 82, 82)
+                                .addComponent(jLabel12)
+                                .addGap(93, 93, 93)
+                                .addComponent(jLabel13)
+                                .addGap(83, 83, 83)
+                                .addComponent(jLabel14)
+                                .addGap(87, 87, 87)
+                                .addComponent(jLabel15))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(PanelTabuleiro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(9, 9, 9)
+                                        .addComponent(readyButton)
+                                        .addGap(142, 142, 142)
+                                        .addComponent(botaoDebug, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(140, 140, 140)
+                                        .addComponent(limparTabuleiro))))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
                         .addComponent(jButton26)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGap(436, 436, 436)
-                .addComponent(jLabel2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(306, 306, 306)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(42, 42, 42)
+                        .addComponent(jLabel2)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(PainelBombas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(PanelBandeira, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Painel1s, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Painel10s, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Painel3s, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Painel2s, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(22, 22, 22)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton26))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addComponent(jButton26)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap(22, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2))
+                        .addGap(49, 49, 49)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(91, 91, 91)
+                        .addComponent(jLabel9)
+                        .addGap(48, 48, 48)
+                        .addComponent(jLabel10))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(PanelBandeira, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Painel1s, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(PainelBombas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Painel2s, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Painel3s, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(Painel10s, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel12)
+                            .addComponent(jLabel13)
+                            .addComponent(jLabel14)
+                            .addComponent(jLabel15))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(PanelTabuleiro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(limparTabuleiro)
+                            .addComponent(botaoDebug)
+                            .addComponent(readyButton))))
+                .addGap(68, 68, 68))
         );
 
         pack();
@@ -326,33 +727,171 @@ public class TabuleiroSet extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void ComboBandeiraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboBandeiraActionPerformed
-        // TODO add your handling code here:
-        if (ComboBandeira.getSelectedItem().equals("Casa 1")) {
-            Buttom1Red.setIcon(new javax.swing.ImageIcon(getClass().getResource("/1.png")));
-        } else if (ComboBandeira.getSelectedItem().equals("Casa 2")) {
-            Buttom2Red.setIcon(new javax.swing.ImageIcon(getClass().getResource("/1.png")));
-        } else if (ComboBandeira.getSelectedItem().equals("Casa 3")) {
-            Buttom3Red.setIcon(new javax.swing.ImageIcon(getClass().getResource("/1.png")));
-        } else if (ComboBandeira.getSelectedItem().equals("Casa 4")) {
-            Buttom4Red.setIcon(new javax.swing.ImageIcon(getClass().getResource("/1.png")));
-        } else if (ComboBandeira.getSelectedItem().equals("Casa 5")) {
-            Buttom5Red.setIcon(new javax.swing.ImageIcon(getClass().getResource("/1.png")));
-        } else if (ComboBandeira.getSelectedItem().equals("Casa 6")) {
-            Buttom6Red.setIcon(new javax.swing.ImageIcon(getClass().getResource("/1.png")));
-        } else if (ComboBandeira.getSelectedItem().equals("Casa 7")) {
-            Buttom7Red.setIcon(new javax.swing.ImageIcon(getClass().getResource("/1.png")));
-        } else if (ComboBandeira.getSelectedItem().equals("Casa 8")) {
-            Buttom8Red.setIcon(new javax.swing.ImageIcon(getClass().getResource("/1.png")));
-        } else if (ComboBandeira.getSelectedItem().equals("Casa 9")) {
-            Buttom9Red.setIcon(new javax.swing.ImageIcon(getClass().getResource("/1.png")));
-        } else if (ComboBandeira.getSelectedItem().equals("Casa 10")) {
-            Buttom10Red.setIcon(new javax.swing.ImageIcon(getClass().getResource("/1.png")));
+//    public void buttonIntoList(){
+//        for(int i = 1; i < 11; i++){
+//                Object buttonName = "jButton" + Integer.toString(i);
+//                botaoDoTabuleiro.add(javax.swing.JButton buttonName);
+//        }
+//    }
+    
+    public void setButton(String local, String iconLocal) {
+        switch (local) {
+            case "a1" ->
+                this.Buttom1Red.setIcon(new ImageIcon(iconLocal));
+            case "a2" ->
+                this.Buttom2Red.setIcon(new ImageIcon(iconLocal));
+            case "a3" ->
+                this.Buttom3Red.setIcon(new ImageIcon(iconLocal));
+            case "a4" ->
+                this.Buttom4Red.setIcon(new ImageIcon(iconLocal));
+            case "a5" ->
+                this.Buttom5Red.setIcon(new ImageIcon(iconLocal));
+            case "b1" ->
+                this.Buttom6Red.setIcon(new ImageIcon(iconLocal));
+            case "b2" ->
+                this.Buttom7Red.setIcon(new ImageIcon(iconLocal));
+            case "b3" ->
+                this.Buttom8Red.setIcon(new ImageIcon(iconLocal));
+            case "b4" ->
+                this.Buttom9Red.setIcon(new ImageIcon(iconLocal));
+            case "b5" ->
+                this.Buttom10Red.setIcon(new ImageIcon(iconLocal));
         }
-    }//GEN-LAST:event_ComboBandeiraActionPerformed
+    }
+
+    private void removerItensBandeira() {
+        comboEspiao1s.removeItem(comboBandeira.getSelectedItem().toString());
+        comboBomba1.removeItem(comboBandeira.getSelectedItem().toString());
+        comboBomba2.removeItem(comboBandeira.getSelectedItem().toString());
+        comboDefuse3s1.removeItem(comboBandeira.getSelectedItem().toString());
+        comboDefuse3s2.removeItem(comboBandeira.getSelectedItem().toString());
+        comboMarechal10.removeItem(comboBandeira.getSelectedItem().toString());
+        comboSoldado2s1.removeItem(comboBandeira.getSelectedItem().toString());
+        comboSoldado2s2.removeItem(comboBandeira.getSelectedItem().toString());
+        comboSoldado2s3.removeItem(comboBandeira.getSelectedItem().toString());
+    }
+
+    private void removerItensEspiao() {
+        comboBandeira.removeItem(comboEspiao1s.getSelectedItem().toString());
+        comboBomba1.removeItem(comboEspiao1s.getSelectedItem().toString());
+        comboBomba2.removeItem(comboEspiao1s.getSelectedItem().toString());
+        comboDefuse3s1.removeItem(comboEspiao1s.getSelectedItem().toString());
+        comboDefuse3s2.removeItem(comboEspiao1s.getSelectedItem().toString());
+        comboMarechal10.removeItem(comboEspiao1s.getSelectedItem().toString());
+        comboSoldado2s1.removeItem(comboEspiao1s.getSelectedItem().toString());
+        comboSoldado2s2.removeItem(comboEspiao1s.getSelectedItem().toString());
+        comboSoldado2s3.removeItem(comboEspiao1s.getSelectedItem().toString());
+    }
+
+    private void removerItensBomba1() {
+        comboBandeira.removeItem(comboBomba1.getSelectedItem().toString());
+        comboEspiao1s.removeItem(comboBomba1.getSelectedItem().toString());
+        comboBomba2.removeItem(comboBomba1.getSelectedItem().toString());
+        comboDefuse3s1.removeItem(comboBomba1.getSelectedItem().toString());
+        comboDefuse3s2.removeItem(comboBomba1.getSelectedItem().toString());
+        comboMarechal10.removeItem(comboBomba1.getSelectedItem().toString());
+        comboSoldado2s1.removeItem(comboBomba1.getSelectedItem().toString());
+        comboSoldado2s2.removeItem(comboBomba1.getSelectedItem().toString());
+        comboSoldado2s3.removeItem(comboBomba1.getSelectedItem().toString());
+    }
+
+    private void removerItensBomba2() {
+        comboBandeira.removeItem(comboBomba2.getSelectedItem().toString());
+        comboEspiao1s.removeItem(comboBomba2.getSelectedItem().toString());
+        comboBomba1.removeItem(comboBomba2.getSelectedItem().toString());
+        comboDefuse3s1.removeItem(comboBomba2.getSelectedItem().toString());
+        comboDefuse3s2.removeItem(comboBomba2.getSelectedItem().toString());
+        comboMarechal10.removeItem(comboBomba2.getSelectedItem().toString());
+        comboSoldado2s1.removeItem(comboBomba2.getSelectedItem().toString());
+        comboSoldado2s2.removeItem(comboBomba2.getSelectedItem().toString());
+        comboSoldado2s3.removeItem(comboBomba2.getSelectedItem().toString());
+    }
+
+    private void removerItensSoldado2s1() {
+        comboBandeira.removeItem(comboSoldado2s1.getSelectedItem().toString());
+        comboEspiao1s.removeItem(comboSoldado2s1.getSelectedItem().toString());
+        comboBomba1.removeItem(comboSoldado2s1.getSelectedItem().toString());
+        comboDefuse3s1.removeItem(comboSoldado2s1.getSelectedItem().toString());
+        comboDefuse3s2.removeItem(comboSoldado2s1.getSelectedItem().toString());
+        comboMarechal10.removeItem(comboSoldado2s1.getSelectedItem().toString());
+        comboBomba2.removeItem(comboSoldado2s1.getSelectedItem().toString());
+        comboSoldado2s2.removeItem(comboSoldado2s1.getSelectedItem().toString());
+        comboSoldado2s3.removeItem(comboSoldado2s1.getSelectedItem().toString());
+    }
+
+    private void removerItensSoldado2s2() {
+        comboBandeira.removeItem(comboSoldado2s2.getSelectedItem().toString());
+        comboEspiao1s.removeItem(comboSoldado2s2.getSelectedItem().toString());
+        comboBomba1.removeItem(comboSoldado2s2.getSelectedItem().toString());
+        comboDefuse3s1.removeItem(comboSoldado2s2.getSelectedItem().toString());
+        comboDefuse3s2.removeItem(comboSoldado2s2.getSelectedItem().toString());
+        comboMarechal10.removeItem(comboSoldado2s2.getSelectedItem().toString());
+        comboBomba2.removeItem(comboSoldado2s2.getSelectedItem().toString());
+        comboSoldado2s1.removeItem(comboSoldado2s2.getSelectedItem().toString());
+        comboSoldado2s3.removeItem(comboSoldado2s2.getSelectedItem().toString());
+    }
+
+    private void removerItensSoldado2s3() {
+        comboBandeira.removeItem(comboSoldado2s3.getSelectedItem().toString());
+        comboEspiao1s.removeItem(comboSoldado2s3.getSelectedItem().toString());
+        comboBomba1.removeItem(comboSoldado2s3.getSelectedItem().toString());
+        comboDefuse3s1.removeItem(comboSoldado2s3.getSelectedItem().toString());
+        comboDefuse3s2.removeItem(comboSoldado2s3.getSelectedItem().toString());
+        comboMarechal10.removeItem(comboSoldado2s3.getSelectedItem().toString());
+        comboBomba2.removeItem(comboSoldado2s3.getSelectedItem().toString());
+        comboSoldado2s1.removeItem(comboSoldado2s3.getSelectedItem().toString());
+        comboSoldado2s2.removeItem(comboSoldado2s3.getSelectedItem().toString());
+    }
+
+    private void removerItensDefuse3s1() {
+        comboBandeira.removeItem(comboDefuse3s1.getSelectedItem().toString());
+        comboEspiao1s.removeItem(comboDefuse3s1.getSelectedItem().toString());
+        comboBomba1.removeItem(comboDefuse3s1.getSelectedItem().toString());
+        comboSoldado2s3.removeItem(comboDefuse3s1.getSelectedItem().toString());
+        comboDefuse3s2.removeItem(comboDefuse3s1.getSelectedItem().toString());
+        comboMarechal10.removeItem(comboDefuse3s1.getSelectedItem().toString());
+        comboBomba2.removeItem(comboDefuse3s1.getSelectedItem().toString());
+        comboSoldado2s1.removeItem(comboDefuse3s1.getSelectedItem().toString());
+        comboSoldado2s2.removeItem(comboDefuse3s1.getSelectedItem().toString());
+    }
+
+    private void removerItensDefuse3s2() {
+        comboBandeira.removeItem(comboDefuse3s2.getSelectedItem().toString());
+        comboEspiao1s.removeItem(comboDefuse3s2.getSelectedItem().toString());
+        comboBomba1.removeItem(comboDefuse3s2.getSelectedItem().toString());
+        comboSoldado2s3.removeItem(comboDefuse3s2.getSelectedItem().toString());
+        comboDefuse3s1.removeItem(comboDefuse3s2.getSelectedItem().toString());
+        comboMarechal10.removeItem(comboDefuse3s2.getSelectedItem().toString());
+        comboBomba2.removeItem(comboDefuse3s2.getSelectedItem().toString());
+        comboSoldado2s1.removeItem(comboDefuse3s2.getSelectedItem().toString());
+        comboSoldado2s2.removeItem(comboDefuse3s2.getSelectedItem().toString());
+    }
+
+    private void removerItensMarechal() {
+        comboBandeira.removeItem(comboMarechal10.getSelectedItem().toString());
+        comboEspiao1s.removeItem(comboMarechal10.getSelectedItem().toString());
+        comboBomba1.removeItem(comboMarechal10.getSelectedItem().toString());
+        comboSoldado2s3.removeItem(comboMarechal10.getSelectedItem().toString());
+        comboDefuse3s1.removeItem(comboMarechal10.getSelectedItem().toString());
+        comboDefuse3s2.removeItem(comboMarechal10.getSelectedItem().toString());
+        comboBomba2.removeItem(comboMarechal10.getSelectedItem().toString());
+        comboSoldado2s1.removeItem(comboMarechal10.getSelectedItem().toString());
+        comboSoldado2s2.removeItem(comboMarechal10.getSelectedItem().toString());
+    }
+
+
+    private void comboBandeiraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBandeiraActionPerformed
+        // TODO add your handling code here:
+        setButton(comboBandeira.getSelectedItem().toString(), this.bandeira.getIcon());
+        comboBandeira.setEnabled(false);
+        botaoBandeira.setEnabled(false);
+        setName("Bandeira");
+        removerItensBandeira();
+    }//GEN-LAST:event_comboBandeiraActionPerformed
+
 
     private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
         // TODO add your handling code here:
@@ -361,16 +900,184 @@ public class TabuleiroSet extends javax.swing.JFrame {
         m.setVisible(true);
     }//GEN-LAST:event_jButton26ActionPerformed
 
-    private void Buttom1RedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Buttom1RedActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Buttom1RedActionPerformed
+    private void comboEspiao1sActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboEspiao1sActionPerformed
+        setButton(comboEspiao1s.getSelectedItem().toString(), this.espiao.getIcon());
+        comboEspiao1s.setEnabled(false);
+        botaoEspiao1s.setEnabled(false);
+        setName("Espiao");
+        removerItensEspiao();
+    }//GEN-LAST:event_comboEspiao1sActionPerformed
 
-    private void ComboBombasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboBombasActionPerformed
+    private void comboBomba1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBomba1ActionPerformed
+        setButton(comboBomba1.getSelectedItem().toString(), this.bomba1.getIcon());
+        comboBomba1.setEnabled(false);
+        botaoBomba1.setEnabled(false);
+        setName("Bomba1");
+        removerItensBomba1();
+    }//GEN-LAST:event_comboBomba1ActionPerformed
+
+    private void comboSoldado2s1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboSoldado2s1ActionPerformed
+        setButton(comboSoldado2s1.getSelectedItem().toString(), this.soldado1.getIcon());
+        comboSoldado2s1.setEnabled(false);
+        botaoSoldado2s1.setEnabled(false);
+        setName("Soldado2s1");
+        removerItensSoldado2s1();
+    }//GEN-LAST:event_comboSoldado2s1ActionPerformed
+
+    private void comboDefuse3s1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboDefuse3s1ActionPerformed
+        setButton(comboDefuse3s1.getSelectedItem().toString(), this.armeiro1.getIcon());
+        comboDefuse3s1.setEnabled(false);
+        botaoDefuse3s1.setEnabled(false);
+        setName("Defuse3s1");
+        removerItensDefuse3s1();
+    }//GEN-LAST:event_comboDefuse3s1ActionPerformed
+
+    private void comboMarechal10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboMarechal10ActionPerformed
+        setButton(comboMarechal10.getSelectedItem().toString(), this.marechal.getIcon());
+        comboMarechal10.setEnabled(false);
+        botaoMarechal10.setEnabled(false);
+        setName("Marechal");
+        removerItensMarechal();
+    }//GEN-LAST:event_comboMarechal10ActionPerformed
+
+    private void readyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_readyButtonActionPerformed
+
+    }//GEN-LAST:event_readyButtonActionPerformed
+
+    private void comboBomba2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBomba2ActionPerformed
         // TODO add your handling code here:
-        if (ComboBombas.getSelectedItem().equals("Casa 1")) {
-            Buttom1Red.setIcon(new javax.swing.ImageIcon(getClass().getResource("/bomb.png")));
-        }
-    }//GEN-LAST:event_ComboBombasActionPerformed
+        setButton(comboBomba2.getSelectedItem().toString(), this.bomba2.getIcon());
+        comboBomba2.setEnabled(false);
+        botaoBomba2.setEnabled(false);
+        setName("Bomba2");
+        removerItensBomba2();
+    }//GEN-LAST:event_comboBomba2ActionPerformed
+
+    private void comboSoldado2s3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboSoldado2s3ActionPerformed
+        // TODO add your handling code here:
+        setButton(comboSoldado2s3.getSelectedItem().toString(), this.soldado3.getIcon());
+        comboSoldado2s3.setEnabled(false);
+        botaoSoldado2s3.setEnabled(false);
+        setName("Soldado2s3");
+        removerItensSoldado2s3();
+    }//GEN-LAST:event_comboSoldado2s3ActionPerformed
+
+    private void comboSoldado2s2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboSoldado2s2ActionPerformed
+        // TODO add your handling code here:
+        setButton(comboSoldado2s2.getSelectedItem().toString(), this.soldado2.getIcon());
+        comboSoldado2s2.setEnabled(false);
+        botaoSoldado2s2.setEnabled(false);
+        setName("Soldado2s2");
+        removerItensSoldado2s2();
+    }//GEN-LAST:event_comboSoldado2s2ActionPerformed
+
+    private void comboDefuse3s2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboDefuse3s2ActionPerformed
+        // TODO add your handling code here:
+        setButton(comboDefuse3s2.getSelectedItem().toString(), this.armeiro2.getIcon());
+        comboDefuse3s2.setEnabled(false);
+        botaoDefuse3s2.setEnabled(false);
+        setName("Defuse3s2");
+        removerItensDefuse3s2();
+    }//GEN-LAST:event_comboDefuse3s2ActionPerformed
+
+    private void botaoBandeiraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoBandeiraActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botaoBandeiraActionPerformed
+
+    private void botaoEspiao1sActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoEspiao1sActionPerformed
+        // TODO add your handling code here:
+        comboEspiao1s.setEnabled(true);
+    }//GEN-LAST:event_botaoEspiao1sActionPerformed
+
+    private void botaoBomba1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoBomba1ActionPerformed
+        // TODO add your handling code here:
+        comboBomba1.setEnabled(true);
+    }//GEN-LAST:event_botaoBomba1ActionPerformed
+
+    private void botaoBomba2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoBomba2ActionPerformed
+        // TODO add your handling code here:
+        comboBomba2.setEnabled(true);
+    }//GEN-LAST:event_botaoBomba2ActionPerformed
+
+    private void botaoSoldado2s1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoSoldado2s1ActionPerformed
+        // TODO add your handling code here:
+        comboSoldado2s1.setEnabled(true);
+    }//GEN-LAST:event_botaoSoldado2s1ActionPerformed
+
+    private void botaoSoldado2s2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoSoldado2s2ActionPerformed
+        // TODO add your handling code here:
+        comboSoldado2s2.setEnabled(true);
+    }//GEN-LAST:event_botaoSoldado2s2ActionPerformed
+
+    private void botaoSoldado2s3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoSoldado2s3ActionPerformed
+        // TODO add your handling code here:
+        comboSoldado2s3.setEnabled(true);
+    }//GEN-LAST:event_botaoSoldado2s3ActionPerformed
+
+    private void botaoDefuse3s1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoDefuse3s1ActionPerformed
+        // TODO add your handling code here:
+        comboDefuse3s1.setEnabled(true);
+    }//GEN-LAST:event_botaoDefuse3s1ActionPerformed
+
+    private void botaoDefuse3s2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoDefuse3s2ActionPerformed
+        // TODO add your handling code here:
+        comboDefuse3s2.setEnabled(true);
+    }//GEN-LAST:event_botaoDefuse3s2ActionPerformed
+
+    private void botaoMarechal10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoMarechal10ActionPerformed
+        // TODO add your handling code here:
+        comboMarechal10.setEnabled(true);
+    }//GEN-LAST:event_botaoMarechal10ActionPerformed
+
+    private void limparTabuleiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limparTabuleiroActionPerformed
+        // TODO add your handling code here:
+        limparBotoesTabuleiro();
+        refazerBotoes();
+    }//GEN-LAST:event_limparTabuleiroActionPerformed
+
+    private void Buttom6RedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Buttom6RedActionPerformed
+        
+    }//GEN-LAST:event_Buttom6RedActionPerformed
+
+    private void refazerBotoes() {
+        comboBandeira.setEnabled(true);
+        comboEspiao1s.setEnabled(true);
+        comboBomba1.setEnabled(true);
+        comboBomba2.setEnabled(true);
+        comboSoldado2s1.setEnabled(true);
+        comboSoldado2s2.setEnabled(true);
+        comboSoldado2s3.setEnabled(true);
+        comboDefuse3s1.setEnabled(true);
+        comboDefuse3s2.setEnabled(true);
+        comboMarechal10.setEnabled(true);
+        botaoBandeira.setEnabled(true);
+        botaoEspiao1s.setEnabled(true);
+        botaoBomba1.setEnabled(true);
+        botaoBomba2.setEnabled(true);
+        botaoSoldado2s1.setEnabled(true);
+        botaoSoldado2s2.setEnabled(true);
+        botaoSoldado2s3.setEnabled(true);
+        botaoDefuse3s1.setEnabled(true);
+        botaoDefuse3s2.setEnabled(true);
+        botaoMarechal10.setEnabled(true);
+    }
+    
+    private void limparBotoesTabuleiro (){
+        Buttom1Red.setIcon(null);
+        Buttom2Red.setIcon(null);
+        Buttom3Red.setIcon(null);
+        Buttom4Red.setIcon(null);
+        Buttom5Red.setIcon(null);
+        Buttom6Red.setIcon(null);
+        Buttom7Red.setIcon(null);
+        Buttom8Red.setIcon(null);
+        Buttom9Red.setIcon(null);
+        Buttom10Red.setIcon(null);
+    }
+    
+    private void refazerCombos (){
+        
+    }
 
     /**
      * @param args the command line arguments
@@ -408,6 +1115,11 @@ public class TabuleiroSet extends javax.swing.JFrame {
                 new TabuleiroSet().setVisible(true);
             }
         });
+
+    }
+
+    public void buttonPress(javax.swing.JButton button) {
+        button.setText("Brabo");
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -421,12 +1133,34 @@ public class TabuleiroSet extends javax.swing.JFrame {
     private javax.swing.JButton Buttom7Red;
     private javax.swing.JButton Buttom8Red;
     private javax.swing.JButton Buttom9Red;
-    private javax.swing.JComboBox<String> Combo10s;
-    private javax.swing.JComboBox<String> Combo1s;
-    private javax.swing.JComboBox<String> Combo2s;
-    private javax.swing.JComboBox<String> Combo3s;
-    private javax.swing.JComboBox<String> ComboBandeira;
-    private javax.swing.JComboBox<String> ComboBombas;
+    private javax.swing.JPanel Painel10s;
+    private javax.swing.JPanel Painel1s;
+    private javax.swing.JPanel Painel2s;
+    private javax.swing.JPanel Painel3s;
+    private javax.swing.JPanel PainelBombas;
+    private javax.swing.JPanel PanelBandeira;
+    private javax.swing.JPanel PanelTabuleiro;
+    private javax.swing.JButton botaoBandeira;
+    private javax.swing.JButton botaoBomba1;
+    private javax.swing.JButton botaoBomba2;
+    private javax.swing.JButton botaoDebug;
+    private javax.swing.JButton botaoDefuse3s1;
+    private javax.swing.JButton botaoDefuse3s2;
+    private javax.swing.JButton botaoEspiao1s;
+    private javax.swing.JButton botaoMarechal10;
+    private javax.swing.JButton botaoSoldado2s1;
+    private javax.swing.JButton botaoSoldado2s2;
+    private javax.swing.JButton botaoSoldado2s3;
+    private javax.swing.JComboBox<String> comboBandeira;
+    private javax.swing.JComboBox<String> comboBomba1;
+    private javax.swing.JComboBox<String> comboBomba2;
+    private javax.swing.JComboBox<String> comboDefuse3s1;
+    private javax.swing.JComboBox<String> comboDefuse3s2;
+    private javax.swing.JComboBox<String> comboEspiao1s;
+    private javax.swing.JComboBox<String> comboMarechal10;
+    private javax.swing.JComboBox<String> comboSoldado2s1;
+    private javax.swing.JComboBox<String> comboSoldado2s2;
+    private javax.swing.JComboBox<String> comboSoldado2s3;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
@@ -434,7 +1168,6 @@ public class TabuleiroSet extends javax.swing.JFrame {
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton25;
     private javax.swing.JButton jButton26;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -444,6 +1177,12 @@ public class TabuleiroSet extends javax.swing.JFrame {
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -451,7 +1190,8 @@ public class TabuleiroSet extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JButton limparTabuleiro;
+    private javax.swing.JButton readyButton;
     // End of variables declaration//GEN-END:variables
 }

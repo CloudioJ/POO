@@ -36,4 +36,8 @@ public class Peças {
         return this.contador;
     }
     
+    public String getIcon(){
+        return "S:\\POO\\gamePOO\\src\\main\\resources\\" + getPatente() + ".png";
+    }
+    
 }
