@@ -261,61 +261,135 @@
       </Layout>
       <SubComponents>
         <Component class="javax.swing.JButton" name="jButton1">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="a1"/>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton2">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="a2"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jButton3">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="a5"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jButton4">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="a3"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jButton5">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="a4"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jButton6">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="b1"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jButton7">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="b2"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jButton8">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="b3"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jButton9">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="b4"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jButton10">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="b5"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jButton11">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="c1"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jButton12">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="c2"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jButton13">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="c4"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="jButton14">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="c5"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="Buttom1Red">
           <Properties>
+            <Property name="label" type="java.lang.String" value="d1"/>
             <Property name="name" type="java.lang.String" value="" noResource="true"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="Buttom2Red">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="d2"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="Buttom3Red">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="d3"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="Buttom4Red">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="d4"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="Buttom5Red">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="d5"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="Buttom6Red">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="e1"/>
+            <Property name="name" type="java.lang.String" value="" noResource="true"/>
+          </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Buttom6RedActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="Buttom7Red">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="e2"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="Buttom8Red">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="e3"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="Buttom9Red">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="e4"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="Buttom10Red">
+          <Properties>
+            <Property name="label" type="java.lang.String" value="e5"/>
+          </Properties>
+          <AccessibilityProperties>
+            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
+          </AccessibilityProperties>
         </Component>
       </SubComponents>
     </Container>
