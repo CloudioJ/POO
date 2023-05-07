@@ -11,13 +11,11 @@ package Pieces;
 public class Peças {
     private String patente;
     private int nivel;
-    private int contador;
     private boolean anda;
     
     public Peças(String patente, int nivel, boolean anda){
         this.patente = patente;
         this.nivel = nivel;
-        this.contador = 0;
         this.anda = anda;
     }
     
@@ -27,17 +25,15 @@ public class Peças {
     public int getNivel(){
         return this.nivel;
     }
-    
-    public void addPeça(){
-        this.contador++;
-    }
-    
-    public int getContador(){
-        return this.contador;
-    }
-    
+
     public String getIcon(){
         return "S:\\POO\\gamePOO\\src\\main\\resources\\" + getPatente() + ".png";
     }
     
+    public int combat(Peças peça2){
+        if (getNivel() >= peça2.getNivel()){
+            return getNivel();
+        }
+        return peça2.getNivel();
+    }
 }
