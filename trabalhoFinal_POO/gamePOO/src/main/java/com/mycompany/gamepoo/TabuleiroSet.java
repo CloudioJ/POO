@@ -40,12 +40,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
     private Peças armeiro2 = new Armeiro();
     private Peças marechal = new Marechal();
     private boolean secondClickTest = false;
-    private int comp1;
     private JButton botaoAnterior;
-    private int tempX;
-    private int tempY;
-    private int tempWidth;
-    private int tempHeight;
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -64,7 +59,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
                 @Override
                 public void actionPerformed(ActionEvent e){
                     if(!secondClickTest){
-                        if(button.getIcon() != null){
+                        if(button.getIcon() != null && !button.getName().equals("Bomba") && !button.getName().equals("Bandeira")){
                             System.out.println("PRIMEIRO CLIQUE");
                             System.out.println(button.getName());
                             botaoAnterior = button;
@@ -78,13 +73,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
                                     swapButtons(button, botaoAnterior);
                                     secondClickTest = false;
                                  } else {
-                                    int nivelPeça1 = getNivelDaPeça(botaoAnterior.getName());
-                                    int nivelPeça2 = getNivelDaPeça(button.getName());
-                                    if(nivelPeça1 >= nivelPeça2){
-                                        clearButton(button);
-                                    } else {
-                                        clearButton(botaoAnterior);
-                                    }
+                                    combate(botaoAnterior, button);
                                     secondClickTest = false;
                                 }
                         } else {
@@ -106,6 +95,21 @@ public class TabuleiroSet extends javax.swing.JFrame {
         
         botao1.setBounds(botao2.getBounds().x, botao2.getBounds().y, botao2.getBounds().width, botao2.getBounds().height);
         botao2.setBounds(botao1x, botao1y, botao1width, botao1height);
+    }
+    
+    public void combate(JButton botao1, JButton botao2){
+        int nivel1 = getNivelDaPeça(botao1.getName());
+        int nivel2 = getNivelDaPeça(botao2.getName());
+        
+        if (nivel1 >= nivel2){
+            clearButton(botao2);
+        } else if (nivel1 == 3 && nivel2 == 11){
+            clearButton(botao2);
+        } else if (nivel1 == 1 && nivel2 == 10){
+            clearButton(botao2);
+        } else {
+            clearButton(botao1);
+        }
     }
     
     public int getNivelDaPeça(String nomeDaPeça){
@@ -846,42 +850,8 @@ public class TabuleiroSet extends javax.swing.JFrame {
         botao.setName(peça.getPatente());
         botao.setIcon(new ImageIcon(peça.getIcon()));
     }
-    
-//    public void setButtonActionListener(JButton botao, Peças peça){
-//        botao.addActionListener(new ActionListener(){
-//            @Override
-//                public void actionPerformed(ActionEvent e){
-//                    if(!secondClickTest){
-//                        if(botao.getIcon() != null){
-//                            System.out.println("PRIMEIRO CLIQUE");
-//                            botaoAnterior = botao;
-//                            botao.setName(Integer.toString(peça.getNivel()));
-//                            System.out.println(botao.getName());
-//                            secondClickTest = true;             
-//                        }
-//                    } else {
-//                        System.out.println("SEGUNDO CLIQUE");
-//                        if(botao.getIcon() == null){
-//                            if(((botao.getBounds().x == botaoAnterior.getBounds().x - 110 || botaoAnterior.getBounds().x + 110 == botao.getBounds().x) && (botao.getBounds().y == botaoAnterior.getBounds().y)) || 
-//                                    ((botao.getBounds().y == botaoAnterior.getBounds().y + 104 || botao.getBounds().y == botaoAnterior.getBounds().y - 104) && (botao.getBounds().x == botaoAnterior.getBounds().x))) {
-//                                swapButtons(botao, botaoAnterior);
-//                                secondClickTest = false;
-//                            }
-//                        } else {
-//                            if(Integer.parseInt(botaoAnterior.getName()) >= Integer.parseInt(botao.getName())){
-//                                clearButton(botao);
-//                            } else {
-//                                clearButton(botaoAnterior);
-//                            }
-//                        }
-//                        secondClickTest = false;
-//                    }
-//                }
-//        });
-//    }
-    
+
     private void clearButton(JButton botao){
-        botao.setName(null);
         botao.setIcon(null);
     }
     
