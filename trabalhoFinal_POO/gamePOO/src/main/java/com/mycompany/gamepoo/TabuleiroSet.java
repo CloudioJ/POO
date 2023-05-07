@@ -39,6 +39,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
     private Peças armeiro1 = new Armeiro();
     private Peças armeiro2 = new Armeiro();
     private Peças marechal = new Marechal();
+    private int comp1;
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -770,7 +771,8 @@ public class TabuleiroSet extends javax.swing.JFrame {
             public void actionPerformed(ActionEvent e){
                 String patente = peça.getPatente();
                 int nivel = peça.getNivel();
-                System.out.println("Patente: " + patente + " Nivel: " + nivel);
+                comp1 = nivel;
+                System.out.println("Patente: " + patente + " Nivel: " + nivel + " comp1 = " + comp1);
             }
         });
     }
