@@ -205,6 +205,9 @@ public class TabuleiroSet extends javax.swing.JFrame {
         comboSoldado2s2 = new javax.swing.JComboBox<>();
         comboSoldado2s3 = new javax.swing.JComboBox<>();
         comboSoldado2s1 = new javax.swing.JComboBox<>();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -447,7 +450,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
             }
         });
 
-        comboBandeira.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "a1", "a2", "a3", "a4", "a5", "b1", "b2", "b3", "b4", "b5" }));
+        comboBandeira.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "D1", "D2", "D3", "D4", "D5", "E1", "E2", "E3", "E4", "E5" }));
         comboBandeira.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 comboBandeiraActionPerformed(evt);
@@ -467,7 +470,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel5.setText("1s");
 
-        comboEspiao1s.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "a1", "a2", "a3", "a4", "a5", "b1", "b2", "b3", "b4", "b5" }));
+        comboEspiao1s.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "D1", "D2", "D3", "D4", "D5", "E1", "E2", "E3", "E4", "E5" }));
         comboEspiao1s.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 comboEspiao1sActionPerformed(evt);
@@ -488,14 +491,14 @@ public class TabuleiroSet extends javax.swing.JFrame {
             }
         });
 
-        comboBomba1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "a1", "a2", "a3", "a4", "a5", "b1", "b2", "b3", "b4", "b5" }));
+        comboBomba1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "D1", "D2", "D3", "D4", "D5", "E1", "E2", "E3", "E4", "E5" }));
         comboBomba1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 comboBomba1ActionPerformed(evt);
             }
         });
 
-        comboBomba2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "a1", "a2", "a3", "a4", "a5", "b1", "b2", "b3", "b4", "b5" }));
+        comboBomba2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "D1", "D2", "D3", "D4", "D5", "E1", "E2", "E3", "E4", "E5" }));
         comboBomba2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 comboBomba2ActionPerformed(evt);
@@ -546,14 +549,14 @@ public class TabuleiroSet extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel7.setText("3s");
 
-        comboDefuse3s2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "a1", "a2", "a3", "a4", "a5", "b1", "b2", "b3", "b4", "b5" }));
+        comboDefuse3s2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "D1", "D2", "D3", "D4", "D5", "E1", "E2", "E3", "E4", "E5" }));
         comboDefuse3s2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 comboDefuse3s2ActionPerformed(evt);
             }
         });
 
-        comboDefuse3s1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "a1", "a2", "a3", "a4", "a5", "b1", "b2", "b3", "b4", "b5" }));
+        comboDefuse3s1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "D1", "D2", "D3", "D4", "D5", "E1", "E2", "E3", "E4", "E5" }));
         comboDefuse3s1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 comboDefuse3s1ActionPerformed(evt);
@@ -567,7 +570,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
             }
         });
 
-        comboMarechal10.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "a1", "a2", "a3", "a4", "a5", "b1", "b2", "b3", "b4", "b5" }));
+        comboMarechal10.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "D1", "D2", "D3", "D4", "D5", "E1", "E2", "E3", "E4", "E5" }));
         comboMarechal10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 comboMarechal10ActionPerformed(evt);
@@ -577,21 +580,21 @@ public class TabuleiroSet extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel8.setText("10s");
 
-        comboSoldado2s2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "a1", "a2", "a3", "a4", "a5", "b1", "b2", "b3", "b4", "b5" }));
+        comboSoldado2s2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "D1", "D2", "D3", "D4", "D5", "E1", "E2", "E3", "E4", "E5" }));
         comboSoldado2s2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 comboSoldado2s2ActionPerformed(evt);
             }
         });
 
-        comboSoldado2s3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "a1", "a2", "a3", "a4", "a5", "b1", "b2", "b3", "b4", "b5" }));
+        comboSoldado2s3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "D1", "D2", "D3", "D4", "D5", "E1", "E2", "E3", "E4", "E5" }));
         comboSoldado2s3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 comboSoldado2s3ActionPerformed(evt);
             }
         });
 
-        comboSoldado2s1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "a1", "a2", "a3", "a4", "a5", "b1", "b2", "b3", "b4", "b5" }));
+        comboSoldado2s1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "D1", "D2", "D3", "D4", "D5", "E1", "E2", "E3", "E4", "E5" }));
         comboSoldado2s1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 comboSoldado2s1ActionPerformed(evt);
@@ -726,6 +729,15 @@ public class TabuleiroSet extends javax.swing.JFrame {
                 .addGap(29, 29, 29))
         );
 
+        jLabel16.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        jLabel16.setText("C");
+
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        jLabel17.setText("D");
+
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        jLabel18.setText("E");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -733,13 +745,16 @@ public class TabuleiroSet extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(22, 22, 22)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel18)
+                                .addComponent(jLabel16)
+                                .addComponent(jLabel10))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(28, 28, 28)
-                                .addComponent(jLabel9))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jLabel10)))
+                                .addComponent(jLabel9)
+                                .addGap(6, 6, 6)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(47, 47, 47)
@@ -791,10 +806,16 @@ public class TabuleiroSet extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(91, 91, 91)
+                                .addGap(90, 90, 90)
                                 .addComponent(jLabel9)
-                                .addGap(48, 48, 48)
-                                .addComponent(jLabel10))
+                                .addGap(49, 49, 49)
+                                .addComponent(jLabel10)
+                                .addGap(34, 34, 34)
+                                .addComponent(jLabel16)
+                                .addGap(42, 42, 42)
+                                .addComponent(jLabel17)
+                                .addGap(45, 45, 45)
+                                .addComponent(jLabel18))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -824,25 +845,25 @@ public class TabuleiroSet extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     public JButton getButton(String local) {
-        if (local.equals("a1")) {
+        if (local.equals("D1")) {
             return this.Buttom1Red;
-        } else if (local.equals("a2")) {
+        } else if (local.equals("D2")) {
             return this.Buttom2Red;
-        } else if (local.equals("a3")) {
+        } else if (local.equals("D3")) {
             return this.Buttom3Red;
-        } else if (local.equals("a4")) {
+        } else if (local.equals("D4")) {
             return this.Buttom4Red;
-        } else if (local.equals("a5")) {
+        } else if (local.equals("D5")) {
             return this.Buttom5Red;
-        } else if (local.equals("b1")) {
+        } else if (local.equals("E1")) {
             return this.Buttom6Red;
-        } else if (local.equals("b2")) {
+        } else if (local.equals("E2")) {
             return this.Buttom7Red;
-        } else if (local.equals("b3")) {
+        } else if (local.equals("E3")) {
             return this.Buttom8Red;
-        } else if (local.equals("b4")) {
+        } else if (local.equals("E4")) {
             return this.Buttom9Red;
-        } else if (local.equals("b5")) {
+        } else if (local.equals("E5")) {
             return this.Buttom10Red;
         }
         return this.Buttom1Red;
@@ -1243,6 +1264,9 @@ public class TabuleiroSet extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
