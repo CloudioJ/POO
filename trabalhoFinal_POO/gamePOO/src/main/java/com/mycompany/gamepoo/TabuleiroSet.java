@@ -13,6 +13,7 @@ import java.util.LinkedList;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
@@ -53,14 +54,19 @@ public class TabuleiroSet extends javax.swing.JFrame {
                 button.addActionListener(new ActionListener(){
                     @Override
                     public void actionPerformed(ActionEvent e){
-                        System.out.println(e.getSource().toString());
+//                        String comando = e.getActionCommand();
+//                        if(comando instanceof Peças){
+//                            Peças peça = (Peças) comando;
+//                            JOptionPane.showMessageDialog(null, "Patente: " + peça.getPatente());
+                            
+//                        }
                     }
                 });
             }
         }
     }
-    
-    
+
+        
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -135,68 +141,80 @@ public class TabuleiroSet extends javax.swing.JFrame {
 
         PanelTabuleiro.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, java.awt.Color.black));
 
-        jButton1.setText("");
         jButton1.setToolTipText("");
         jButton1.setFocusPainted(false);
+        jButton1.setName("4-0"); // NOI18N
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton3.setText("");
+        jButton2.setName("4-1"); // NOI18N
 
-        jButton5.setText("");
+        jButton3.setName("4-4"); // NOI18N
+
+        jButton4.setName("4-2"); // NOI18N
+
+        jButton5.setName("4-3"); // NOI18N
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
         });
 
-        jButton6.setText("");
+        jButton6.setName("3-0"); // NOI18N
 
-        jButton7.setText("");
+        jButton7.setName("3-1"); // NOI18N
 
-        jButton8.setText("");
+        jButton8.setName("3-2"); // NOI18N
 
-        jButton9.setText("");
+        jButton9.setName("3-3"); // NOI18N
 
-        jButton10.setText("");
+        jButton10.setName("3-4"); // NOI18N
 
-        jButton11.setText("");
+        jButton11.setName("2-0"); // NOI18N
 
-        jButton12.setText("");
+        jButton12.setName("2-1"); // NOI18N
 
-        jButton13.setText("");
+        jButton13.setName("2-3"); // NOI18N
 
-        jButton14.setText("");
+        jButton14.setName("2-4"); // NOI18N
 
-        Buttom1Red.setText("");
-        Buttom1Red.setName(""); // NOI18N
+        Buttom1Red.setName("1-0"); // NOI18N
+        Buttom1Red.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Buttom1RedActionPerformed(evt);
+            }
+        });
 
-        Buttom2Red.setText("");
+        Buttom2Red.setName("1-1"); // NOI18N
 
-        Buttom3Red.setText("");
+        Buttom3Red.setName("1-2"); // NOI18N
 
-        Buttom4Red.setText("");
+        Buttom4Red.setName("1-3"); // NOI18N
 
-        Buttom5Red.setText("");
+        Buttom5Red.setName("1-4"); // NOI18N
 
-        Buttom6Red.setText("");
-        Buttom6Red.setName(""); // NOI18N
+        Buttom6Red.setName("0-0"); // NOI18N
         Buttom6Red.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Buttom6RedActionPerformed(evt);
             }
         });
 
-        Buttom7Red.setText("");
+        Buttom7Red.setName("0-1"); // NOI18N
 
-        Buttom8Red.setText("");
+        Buttom8Red.setName("0-2"); // NOI18N
 
-        Buttom9Red.setText("");
+        Buttom9Red.setName("0-3"); // NOI18N
 
-        Buttom10Red.setText("");
+        Buttom10Red.setName("0-4"); // NOI18N
 
         javax.swing.GroupLayout PanelTabuleiroLayout = new javax.swing.GroupLayout(PanelTabuleiro);
         PanelTabuleiro.setLayout(PanelTabuleiroLayout);
@@ -278,8 +296,6 @@ public class TabuleiroSet extends javax.swing.JFrame {
                     .addComponent(Buttom10Red, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        Buttom10Red.getAccessibleContext().setAccessibleName("");
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setText("STRATEGY 5x5");
@@ -675,8 +691,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(22, 22, 22)
-                        .addComponent(jButton26)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jButton26))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -719,30 +734,45 @@ public class TabuleiroSet extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    public JButton getButton(String local){
+            if (local.equals("a1")){
+                return this.Buttom1Red;
+            } else if (local.equals("a2")){
+                return this.Buttom2Red;
+            } else if (local.equals("a3")){
+                return this.Buttom3Red;
+            } else if (local.equals("a4")){
+                return this.Buttom4Red;
+            } else if (local.equals("a5")){
+                return this.Buttom5Red;
+            } else if (local.equals("b1")){
+                return this.Buttom6Red;
+            } else if (local.equals("b2")){
+                return this.Buttom7Red;
+            } else if (local.equals("b3")){
+                return this.Buttom8Red;
+            } else if (local.equals("b4")){
+                return this.Buttom9Red;
+            } else if (local.equals("b5")){
+                return this.Buttom10Red;
+            }
+            return this.Buttom1Red;
+        }
     
     public void setButton(String local, String iconLocal) {
-        switch (local) {
-            case "a1" ->
-                this.Buttom1Red.setIcon(new ImageIcon(iconLocal));
-            case "a2" ->
-                this.Buttom2Red.setIcon(new ImageIcon(iconLocal));
-            case "a3" ->
-                this.Buttom3Red.setIcon(new ImageIcon(iconLocal));
-            case "a4" ->
-                this.Buttom4Red.setIcon(new ImageIcon(iconLocal));
-            case "a5" ->
-                this.Buttom5Red.setIcon(new ImageIcon(iconLocal));
-            case "b1" ->
-                this.Buttom6Red.setIcon(new ImageIcon(iconLocal));
-            case "b2" ->
-                this.Buttom7Red.setIcon(new ImageIcon(iconLocal));
-            case "b3" ->
-                this.Buttom8Red.setIcon(new ImageIcon(iconLocal));
-            case "b4" ->
-                this.Buttom9Red.setIcon(new ImageIcon(iconLocal));
-            case "b5" ->
-                this.Buttom10Red.setIcon(new ImageIcon(iconLocal));
-        }
+        JButton botao = getButton(local);
+        botao.setIcon(new ImageIcon(iconLocal));
+    }
+    
+    public void setButtonActionListener(JButton botao, Peças peça){
+        botao.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+                String patente = peça.getPatente();
+                int nivel = peça.getNivel();
+                System.out.println("Patente: " + patente + " Nivel: " + nivel);
+            }
+        });
     }
 
     private void removeItens(JComboBox fonte){
@@ -780,6 +810,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
 
     private void comboSoldado2s1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboSoldado2s1ActionPerformed
         setButton(comboSoldado2s1.getSelectedItem().toString(), this.soldado1.getIcon());
+        setButtonActionListener(getButton(comboSoldado2s1.getSelectedItem().toString()), this.soldado1);
         comboSoldado2s1.setEnabled(false);
         botaoSoldado2s1.setEnabled(false);
         setName("Soldado2s1");
@@ -789,6 +820,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
     private void comboSoldado2s3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboSoldado2s3ActionPerformed
         // TODO add your handling code here:
         setButton(comboSoldado2s3.getSelectedItem().toString(), this.soldado3.getIcon());
+        setButtonActionListener(getButton(comboSoldado2s3.getSelectedItem().toString()), this.soldado3);
         comboSoldado2s3.setEnabled(false);
         botaoSoldado2s3.setEnabled(false);
         setName("Soldado2s3");
@@ -798,6 +830,8 @@ public class TabuleiroSet extends javax.swing.JFrame {
     private void comboSoldado2s2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboSoldado2s2ActionPerformed
         // TODO add your handling code here:
         setButton(comboSoldado2s2.getSelectedItem().toString(), this.soldado2.getIcon());
+        setButtonActionListener(getButton(comboSoldado2s2.getSelectedItem().toString()), this.soldado2);
+//        setPeçaToBotao(getButton(comboSoldado2s2.getSelectedItem().toString()), this.soldado2);;
         comboSoldado2s2.setEnabled(false);
         botaoSoldado2s2.setEnabled(false);
         setName("Soldado2s2");
@@ -806,6 +840,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
 
     private void comboMarechal10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboMarechal10ActionPerformed
         setButton(comboMarechal10.getSelectedItem().toString(), this.marechal.getIcon());
+        setButtonActionListener(getButton(comboMarechal10.getSelectedItem().toString()), this.marechal);
         comboMarechal10.setEnabled(false);
         botaoMarechal10.setEnabled(false);
         setName("Marechal");
@@ -819,6 +854,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
 
     private void comboDefuse3s1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboDefuse3s1ActionPerformed
         setButton(comboDefuse3s1.getSelectedItem().toString(), this.armeiro1.getIcon());
+        setButtonActionListener(getButton(comboDefuse3s1.getSelectedItem().toString()), this.armeiro1);
         comboDefuse3s1.setEnabled(false);
         botaoDefuse3s1.setEnabled(false);
         setName("Defuse3s1");
@@ -828,6 +864,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
     private void comboDefuse3s2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboDefuse3s2ActionPerformed
         // TODO add your handling code here:
         setButton(comboDefuse3s2.getSelectedItem().toString(), this.armeiro2.getIcon());
+        setButtonActionListener(getButton(comboDefuse3s2.getSelectedItem().toString()), this.armeiro2);
         comboDefuse3s2.setEnabled(false);
         botaoDefuse3s2.setEnabled(false);
         setName("Defuse3s2");
@@ -862,6 +899,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
     private void comboBomba2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBomba2ActionPerformed
         // TODO add your handling code here:
         setButton(comboBomba2.getSelectedItem().toString(), this.bomba2.getIcon());
+        setButtonActionListener(getButton(comboBomba2.getSelectedItem().toString()), this.bomba2);
         comboBomba2.setEnabled(false);
         botaoBomba2.setEnabled(false);
         setName("Bomba2");
@@ -870,6 +908,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
 
     private void comboBomba1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBomba1ActionPerformed
         setButton(comboBomba1.getSelectedItem().toString(), this.bomba1.getIcon());
+        setButtonActionListener(getButton(comboBomba1.getSelectedItem().toString()), this.bomba1);
         comboBomba1.setEnabled(false);
         botaoBomba1.setEnabled(false);
         setName("Bomba1");
@@ -888,6 +927,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
 
     private void comboEspiao1sActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboEspiao1sActionPerformed
         setButton(comboEspiao1s.getSelectedItem().toString(), this.espiao.getIcon());
+        setButtonActionListener(getButton(comboEspiao1s.getSelectedItem().toString()), this.espiao);
         comboEspiao1s.setEnabled(false);
         botaoEspiao1s.setEnabled(false);
         setName("Espiao");
@@ -902,6 +942,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
     private void comboBandeiraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBandeiraActionPerformed
         // TODO add your handling code here:
         setButton(comboBandeira.getSelectedItem().toString(), this.bandeira.getIcon());
+        setButtonActionListener(getButton(comboBandeira.getSelectedItem().toString()), this.bandeira);
         comboBandeira.setEnabled(false);
         botaoBandeira.setEnabled(false);
         setName("Bandeira");
@@ -915,6 +956,16 @@ public class TabuleiroSet extends javax.swing.JFrame {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    private void Buttom1RedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Buttom1RedActionPerformed
+//        Buttom1Red.getBounds();
+        System.out.println(Buttom1Red.getBounds());
+        System.out.println(Buttom1Red.getIcon());
+    }//GEN-LAST:event_Buttom1RedActionPerformed
 
     private void refazerBotoes() {
         comboBandeira.setEnabled(true);
