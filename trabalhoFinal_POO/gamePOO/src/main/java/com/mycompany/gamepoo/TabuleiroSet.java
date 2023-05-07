@@ -61,12 +61,27 @@ public class TabuleiroSet extends javax.swing.JFrame {
             if(component instanceof JButton){
                 JButton button = (JButton) component;
                 button.addActionListener(new ActionListener(){
-                    @Override
-                    public void actionPerformed(ActionEvent e){
-                        System.out.println(button.getBounds().x + "     " + button.getBounds().y);
-                              
+            @Override
+            public void actionPerformed(ActionEvent e){
+                if(!secondClickTest){
+                    if(button.getIcon() != null){
+                        System.out.println("PRIMEIRO CLIQUE");
+                        botaoAnterior = button;
+                        secondClickTest = true;             
                     }
-                });
+//                    tempX = botao.getBounds().x;
+//                    tempY = botao.getBounds().y;
+//                    tempWidth = botao.getBounds().width;
+//                    tempHeight = botao.getBounds().x;
+                } else {
+                    System.out.println("SEGUNDO CLIQUE");
+                    if(button.getIcon() == null){
+                        swapButtons(button, botaoAnterior);
+                    }
+                    secondClickTest = false;
+                }
+            }
+        });
             }
         }
     }
@@ -782,16 +797,20 @@ public class TabuleiroSet extends javax.swing.JFrame {
             @Override
             public void actionPerformed(ActionEvent e){
                 if(!secondClickTest){
-                    System.out.println("PRIMEIRO CLIQUE");
-                    botaoAnterior = botao;
+                    if(botao.getIcon() != null){
+                        System.out.println("PRIMEIRO CLIQUE");
+                        botaoAnterior = botao;
+                        secondClickTest = true;             
+                    }
 //                    tempX = botao.getBounds().x;
 //                    tempY = botao.getBounds().y;
 //                    tempWidth = botao.getBounds().width;
 //                    tempHeight = botao.getBounds().x;
-                    secondClickTest = true;
                 } else {
                     System.out.println("SEGUNDO CLIQUE");
-                    swapButtons(botao, botaoAnterior);
+                    if(botao.getIcon() == null){
+                        swapButtons(botao, botaoAnterior);
+                    }
                     secondClickTest = false;
                 }
             }
@@ -840,12 +859,12 @@ public class TabuleiroSet extends javax.swing.JFrame {
     }//GEN-LAST:event_limparTabuleiroActionPerformed
 
     private void Buttom6RedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Buttom6RedActionPerformed
-        swapButtons(Buttom6Red, jButton1);
+
     }//GEN-LAST:event_Buttom6RedActionPerformed
 
     private void comboSoldado2s1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboSoldado2s1ActionPerformed
         setButton(comboSoldado2s1.getSelectedItem().toString(), this.soldado1.getIcon());
-        setButtonActionListener(getButton(comboSoldado2s1.getSelectedItem().toString()), this.soldado1);
+//        setButtonActionListener(getButton(comboSoldado2s1.getSelectedItem().toString()), this.soldado1);
         comboSoldado2s1.setEnabled(false);
         botaoSoldado2s1.setEnabled(false);
         setName("Soldado2s1");
@@ -855,7 +874,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
     private void comboSoldado2s3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboSoldado2s3ActionPerformed
         // TODO add your handling code here:
         setButton(comboSoldado2s3.getSelectedItem().toString(), this.soldado3.getIcon());
-        setButtonActionListener(getButton(comboSoldado2s3.getSelectedItem().toString()), this.soldado3);
+//        setButtonActionListener(getButton(comboSoldado2s3.getSelectedItem().toString()), this.soldado3);
         comboSoldado2s3.setEnabled(false);
         botaoSoldado2s3.setEnabled(false);
         setName("Soldado2s3");
@@ -865,7 +884,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
     private void comboSoldado2s2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboSoldado2s2ActionPerformed
         // TODO add your handling code here:
         setButton(comboSoldado2s2.getSelectedItem().toString(), this.soldado2.getIcon());
-        setButtonActionListener(getButton(comboSoldado2s2.getSelectedItem().toString()), this.soldado2);
+//        setButtonActionListener(getButton(comboSoldado2s2.getSelectedItem().toString()), this.soldado2);
 //        setPeçaToBotao(getButton(comboSoldado2s2.getSelectedItem().toString()), this.soldado2);;
         comboSoldado2s2.setEnabled(false);
         botaoSoldado2s2.setEnabled(false);
@@ -875,7 +894,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
 
     private void comboMarechal10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboMarechal10ActionPerformed
         setButton(comboMarechal10.getSelectedItem().toString(), this.marechal.getIcon());
-        setButtonActionListener(getButton(comboMarechal10.getSelectedItem().toString()), this.marechal);
+//        setButtonActionListener(getButton(comboMarechal10.getSelectedItem().toString()), this.marechal);
         comboMarechal10.setEnabled(false);
         botaoMarechal10.setEnabled(false);
         setName("Marechal");
@@ -889,7 +908,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
 
     private void comboDefuse3s1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboDefuse3s1ActionPerformed
         setButton(comboDefuse3s1.getSelectedItem().toString(), this.armeiro1.getIcon());
-        setButtonActionListener(getButton(comboDefuse3s1.getSelectedItem().toString()), this.armeiro1);
+//        setButtonActionListener(getButton(comboDefuse3s1.getSelectedItem().toString()), this.armeiro1);
         comboDefuse3s1.setEnabled(false);
         botaoDefuse3s1.setEnabled(false);
         setName("Defuse3s1");
@@ -899,7 +918,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
     private void comboDefuse3s2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboDefuse3s2ActionPerformed
         // TODO add your handling code here:
         setButton(comboDefuse3s2.getSelectedItem().toString(), this.armeiro2.getIcon());
-        setButtonActionListener(getButton(comboDefuse3s2.getSelectedItem().toString()), this.armeiro2);
+//        setButtonActionListener(getButton(comboDefuse3s2.getSelectedItem().toString()), this.armeiro2);
         comboDefuse3s2.setEnabled(false);
         botaoDefuse3s2.setEnabled(false);
         setName("Defuse3s2");
@@ -934,7 +953,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
     private void comboBomba2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBomba2ActionPerformed
         // TODO add your handling code here:
         setButton(comboBomba2.getSelectedItem().toString(), this.bomba2.getIcon());
-        setButtonActionListener(getButton(comboBomba2.getSelectedItem().toString()), this.bomba2);
+//        setButtonActionListener(getButton(comboBomba2.getSelectedItem().toString()), this.bomba2);
         comboBomba2.setEnabled(false);
         botaoBomba2.setEnabled(false);
         setName("Bomba2");
@@ -943,7 +962,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
 
     private void comboBomba1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBomba1ActionPerformed
         setButton(comboBomba1.getSelectedItem().toString(), this.bomba1.getIcon());
-        setButtonActionListener(getButton(comboBomba1.getSelectedItem().toString()), this.bomba1);
+//        setButtonActionListener(getButton(comboBomba1.getSelectedItem().toString()), this.bomba1);
         comboBomba1.setEnabled(false);
         botaoBomba1.setEnabled(false);
         setName("Bomba1");
@@ -962,7 +981,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
 
     private void comboEspiao1sActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboEspiao1sActionPerformed
         setButton(comboEspiao1s.getSelectedItem().toString(), this.espiao.getIcon());
-        setButtonActionListener(getButton(comboEspiao1s.getSelectedItem().toString()), this.espiao);
+//        setButtonActionListener(getButton(comboEspiao1s.getSelectedItem().toString()), this.espiao);
         comboEspiao1s.setEnabled(false);
         botaoEspiao1s.setEnabled(false);
         setName("Espiao");
@@ -977,7 +996,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
     private void comboBandeiraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBandeiraActionPerformed
         // TODO add your handling code here:
         setButton(comboBandeira.getSelectedItem().toString(), this.bandeira.getIcon());
-        setButtonActionListener(getButton(comboBandeira.getSelectedItem().toString()), this.bandeira);
+//        setButtonActionListener(getButton(comboBandeira.getSelectedItem().toString()), this.bandeira);
         comboBandeira.setEnabled(false);
         botaoBandeira.setEnabled(false);
         setName("Bandeira");
