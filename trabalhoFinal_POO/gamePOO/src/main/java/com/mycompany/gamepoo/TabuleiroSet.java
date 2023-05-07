@@ -67,15 +67,24 @@ public class TabuleiroSet extends javax.swing.JFrame {
                         if(button.getIcon() != null){
                             System.out.println("PRIMEIRO CLIQUE");
                             botaoAnterior = button;
-                            secondClickTest = true;             
+                            secondClickTest = true;
                         }
                     } else {
                         System.out.println("SEGUNDO CLIQUE");
-                        if(button.getIcon() == null){
-                            if(((button.getBounds().x == botaoAnterior.getBounds().x - 110 || botaoAnterior.getBounds().x + 110 == button.getBounds().x) && (button.getBounds().y == botaoAnterior.getBounds().y)) || 
+                        if(((button.getBounds().x == botaoAnterior.getBounds().x - 110 || botaoAnterior.getBounds().x + 110 == button.getBounds().x) && (button.getBounds().y == botaoAnterior.getBounds().y)) || 
                                     ((button.getBounds().y == botaoAnterior.getBounds().y + 104 || button.getBounds().y == botaoAnterior.getBounds().y - 104) && (button.getBounds().x == botaoAnterior.getBounds().x))) {
-                                swapButtons(button, botaoAnterior);
-                            }
+                                if(button.getIcon() == null){
+                                    swapButtons(button, botaoAnterior);
+                                    secondClickTest = false;
+//                                if(Integer.parseInt(botaoAnterior.getName()) >= Integer.parseInt(button.getName())){
+//                                    clearButton(button);
+//                                } else {
+//                                    clearButton(botaoAnterior);
+//                                }
+//                                    secondClickTest = false;      
+                                 }
+                        } else {
+                                secondClickTest = false;
                         }
                         secondClickTest = false;
                     }
@@ -206,42 +215,57 @@ public class TabuleiroSet extends javax.swing.JFrame {
         jButton10.setName("3-4"); // NOI18N
 
         jButton11.setName("2-0"); // NOI18N
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
 
-        jButton12.setName("2-1"); // NOI18N
+        jButton12.setName("10"); // NOI18N
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
 
         jButton13.setName("2-3"); // NOI18N
 
         jButton14.setName("2-4"); // NOI18N
 
-        Buttom1Red.setName("1-0"); // NOI18N
+        Buttom1Red.setName(""); // NOI18N
         Buttom1Red.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Buttom1RedActionPerformed(evt);
             }
         });
 
-        Buttom2Red.setName("1-1"); // NOI18N
+        Buttom2Red.setName(""); // NOI18N
 
-        Buttom3Red.setName("1-2"); // NOI18N
+        Buttom3Red.setName(""); // NOI18N
+        Buttom3Red.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Buttom3RedActionPerformed(evt);
+            }
+        });
 
-        Buttom4Red.setName("1-3"); // NOI18N
+        Buttom4Red.setName(""); // NOI18N
 
-        Buttom5Red.setName("1-4"); // NOI18N
+        Buttom5Red.setName(""); // NOI18N
 
-        Buttom6Red.setName("0-0"); // NOI18N
+        Buttom6Red.setName(""); // NOI18N
         Buttom6Red.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Buttom6RedActionPerformed(evt);
             }
         });
 
-        Buttom7Red.setName("0-1"); // NOI18N
+        Buttom7Red.setName(""); // NOI18N
 
-        Buttom8Red.setName("0-2"); // NOI18N
+        Buttom8Red.setName(""); // NOI18N
 
-        Buttom9Red.setName("0-3"); // NOI18N
+        Buttom9Red.setName(""); // NOI18N
 
-        Buttom10Red.setName("0-4"); // NOI18N
+        Buttom10Red.setName(""); // NOI18N
 
         javax.swing.GroupLayout PanelTabuleiroLayout = new javax.swing.GroupLayout(PanelTabuleiro);
         PanelTabuleiro.setLayout(PanelTabuleiroLayout);
@@ -799,6 +823,8 @@ public class TabuleiroSet extends javax.swing.JFrame {
                         if(botao.getIcon() != null){
                             System.out.println("PRIMEIRO CLIQUE");
                             botaoAnterior = botao;
+                            botao.setName(Integer.toString(peça.getNivel()));
+                            System.out.println(botao.getName());
                             secondClickTest = true;             
                         }
                     } else {
@@ -807,14 +833,24 @@ public class TabuleiroSet extends javax.swing.JFrame {
                             if(((botao.getBounds().x == botaoAnterior.getBounds().x - 110 || botaoAnterior.getBounds().x + 110 == botao.getBounds().x) && (botao.getBounds().y == botaoAnterior.getBounds().y)) || 
                                     ((botao.getBounds().y == botaoAnterior.getBounds().y + 104 || botao.getBounds().y == botaoAnterior.getBounds().y - 104) && (botao.getBounds().x == botaoAnterior.getBounds().x))) {
                                 swapButtons(botao, botaoAnterior);
+                                secondClickTest = false;
                             }
                         } else {
-                            
+                            if(Integer.parseInt(botaoAnterior.getName()) >= Integer.parseInt(botao.getName())){
+                                clearButton(botao);
+                            } else {
+                                clearButton(botaoAnterior);
+                            }
                         }
                         secondClickTest = false;
                     }
                 }
         });
+    }
+    
+    private void clearButton(JButton botao){
+        botao.setName(null);
+        botao.setIcon(null);
     }
     
     private void removeItens(JComboBox fonte){
@@ -1005,9 +1041,22 @@ public class TabuleiroSet extends javax.swing.JFrame {
 
     private void Buttom1RedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Buttom1RedActionPerformed
 //        Buttom1Red.getBounds();
-        System.out.println(Buttom1Red.getBounds());
-        System.out.println(Buttom1Red.getIcon());
+//        System.out.println(Buttom1Red.getBounds());
+//        System.out.println(Buttom1Red.getIcon());
     }//GEN-LAST:event_Buttom1RedActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+//        jButton12.setIcon(new ImageIcon(this.marechal.getIcon()));
+//        setButtonActionListener(jButton12, this.marechal);
+    }//GEN-LAST:event_jButton12ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void Buttom3RedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Buttom3RedActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Buttom3RedActionPerformed
 
     private void refazerBotoes() {
         comboBandeira.setEnabled(true);
@@ -1087,11 +1136,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
         });
 
     }
-
-    public void buttonPress(javax.swing.JButton button) {
-        button.setText("Brabo");
-    }
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Buttom10Red;
     private javax.swing.JButton Buttom1Red;
