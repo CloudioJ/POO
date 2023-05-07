@@ -61,27 +61,26 @@ public class TabuleiroSet extends javax.swing.JFrame {
             if(component instanceof JButton){
                 JButton button = (JButton) component;
                 button.addActionListener(new ActionListener(){
-            @Override
-            public void actionPerformed(ActionEvent e){
-                if(!secondClickTest){
-                    if(button.getIcon() != null){
-                        System.out.println("PRIMEIRO CLIQUE");
-                        botaoAnterior = button;
-                        secondClickTest = true;             
+                @Override
+                public void actionPerformed(ActionEvent e){
+                    if(!secondClickTest){
+                        if(button.getIcon() != null){
+                            System.out.println("PRIMEIRO CLIQUE");
+                            botaoAnterior = button;
+                            secondClickTest = true;             
+                        }
+                    } else {
+                        System.out.println("SEGUNDO CLIQUE");
+                        if(button.getIcon() == null){
+                            if(((button.getBounds().x == botaoAnterior.getBounds().x - 110 || botaoAnterior.getBounds().x + 110 == button.getBounds().x) && (button.getBounds().y == botaoAnterior.getBounds().y)) || 
+                                    ((button.getBounds().y == botaoAnterior.getBounds().y + 104 || button.getBounds().y == botaoAnterior.getBounds().y - 104) && (button.getBounds().x == botaoAnterior.getBounds().x))) {
+                                swapButtons(button, botaoAnterior);
+                            }
+                        }
+                        secondClickTest = false;
                     }
-//                    tempX = botao.getBounds().x;
-//                    tempY = botao.getBounds().y;
-//                    tempWidth = botao.getBounds().width;
-//                    tempHeight = botao.getBounds().x;
-                } else {
-                    System.out.println("SEGUNDO CLIQUE");
-                    if(button.getIcon() == null){
-                        swapButtons(button, botaoAnterior);
-                    }
-                    secondClickTest = false;
                 }
-            }
-        });
+                });
             }
         }
     }
@@ -795,38 +794,27 @@ public class TabuleiroSet extends javax.swing.JFrame {
     public void setButtonActionListener(JButton botao, Peças peça){
         botao.addActionListener(new ActionListener(){
             @Override
-            public void actionPerformed(ActionEvent e){
-                if(!secondClickTest){
-                    if(botao.getIcon() != null){
-                        System.out.println("PRIMEIRO CLIQUE");
-                        botaoAnterior = botao;
-                        secondClickTest = true;             
+                public void actionPerformed(ActionEvent e){
+                    if(!secondClickTest){
+                        if(botao.getIcon() != null){
+                            System.out.println("PRIMEIRO CLIQUE");
+                            botaoAnterior = botao;
+                            secondClickTest = true;             
+                        }
+                    } else {
+                        System.out.println("SEGUNDO CLIQUE");
+                        if(botao.getIcon() == null){
+                            if(((botao.getBounds().x == botaoAnterior.getBounds().x - 110 || botaoAnterior.getBounds().x + 110 == botao.getBounds().x) && (botao.getBounds().y == botaoAnterior.getBounds().y)) || 
+                                    ((botao.getBounds().y == botaoAnterior.getBounds().y + 104 || botao.getBounds().y == botaoAnterior.getBounds().y - 104) && (botao.getBounds().x == botaoAnterior.getBounds().x))) {
+                                swapButtons(botao, botaoAnterior);
+                            }
+                        } else {
+                            
+                        }
+                        secondClickTest = false;
                     }
-//                    tempX = botao.getBounds().x;
-//                    tempY = botao.getBounds().y;
-//                    tempWidth = botao.getBounds().width;
-//                    tempHeight = botao.getBounds().x;
-                } else {
-                    System.out.println("SEGUNDO CLIQUE");
-                    if(botao.getIcon() == null){
-                        swapButtons(botao, botaoAnterior);
-                    }
-                    secondClickTest = false;
                 }
-            }
         });
-    }
-    
-    private void desabilitaBotoes(JButton toggle) {
-        Component[] components = PanelTabuleiro.getComponents();
-        for (Component component : components) {
-            if (component instanceof JButton) {
-                JButton button = (JButton) component;
-                if (!button.equals(toggle)) {
-                    button.setEnabled(false);
-                }
-            }
-        }
     }
     
     private void removeItens(JComboBox fonte){
