@@ -5,6 +5,7 @@
 package com.mycompany.gamepoo;
 
 import Pieces.*;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.image.BufferedImage;
 import javax.swing.ImageIcon;
@@ -56,18 +57,32 @@ public class RandomPlacement {
         vetorPeças[array[9]] = marechalEnemy;
     }
 
-    public void RandomAIPlace(ActionEvent menuClick, JButton[] buttonArray, boolean visible) {
+    public void RandomAIPlace(ActionEvent menuClick, JButton[] buttonArray) {
         this.Shuffle();
-        ImageIcon icon = new ImageIcon(new BufferedImage(1, 1, BufferedImage.TYPE_INT_ARGB));
+
+        for (int i = 0; i < 10; i++) {
+            buttonArray[i].setName(vetorPeças[i].getPatente());
+            buttonArray[i].setIcon(new ImageIcon(vetorPeças[i].getIcon()));
+        }
+    }
+
+    public void MostrarIcones(ActionEvent menuClick, JButton[] buttonArray, boolean visible) {
         if (visible == true) {
             for (int i = 0; i < 10; i++) {
-                buttonArray[i].setName(vetorPeças[i].getPatente());
-                buttonArray[i].setIcon(new ImageIcon(vetorPeças[i].getIcon()));
+                if (buttonArray[i].getBackground() != null) {
+                    buttonArray[i].setName(vetorPeças[i].getPatente());
+                    buttonArray[i].setIcon(new ImageIcon(vetorPeças[i].getIcon()));
+                }
             }
         } else {
             for (int i = 0; i < 10; i++) {
+                ImageIcon icon = new ImageIcon(vetorPeças[i].getIcon());
+                Image image = icon.getImage();
+                Image scaledImage = image.getScaledInstance(1, 1, java.awt.Image.SCALE_SMOOTH);
+                ImageIcon newIcon = new ImageIcon(scaledImage);
+
                 buttonArray[i].setName(vetorPeças[i].getPatente());
-                buttonArray[i].setIcon(new ImageIcon(vetorPeças[i].getIcon()));
+                buttonArray[i].setIcon(newIcon);
             }
         }
     }

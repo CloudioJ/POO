@@ -26,7 +26,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
      * Creates new form Tabuleiro
      */
     final JButton[] buttonArrayEnemy = new JButton[10];
-    
+
     public TabuleiroSet() {
         initComponents();
         buttonArrayEnemy[0] = Button1Blue;
@@ -110,11 +110,14 @@ public class TabuleiroSet extends javax.swing.JFrame {
         int nivel1 = getNivelDaPeça(botao1.getName());
         int nivel2 = getNivelDaPeça(botao2.getName());
 
-        if (nivel1 >= nivel2) {
+        if (nivel1 > nivel2) {
             clearButton(botao2);
         } else if (nivel1 == 3 && nivel2 == 11) {
             clearButton(botao2);
         } else if (nivel1 == 1 && nivel2 == 10) {
+            clearButton(botao2);
+        } else if (nivel1 == nivel2) {
+            clearButton(botao1);
             clearButton(botao2);
         } else {
             clearButton(botao1);
@@ -179,7 +182,6 @@ public class TabuleiroSet extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jButton26 = new javax.swing.JButton();
-        botaoDebug = new javax.swing.JButton();
         readyButton = new javax.swing.JButton();
         limparTabuleiro = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
@@ -219,6 +221,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
+        jButtonDebug = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -433,9 +436,6 @@ public class TabuleiroSet extends javax.swing.JFrame {
                 jButton26ActionPerformed(evt);
             }
         });
-
-        botaoDebug.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        botaoDebug.setText("Debug");
 
         readyButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         readyButton.setText("Ready");
@@ -769,55 +769,64 @@ public class TabuleiroSet extends javax.swing.JFrame {
         jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         jLabel18.setText("E");
 
+        jButtonDebug.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jButtonDebug.setText("Debug");
+        jButtonDebug.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDebugActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jLabel18)
-                        .addComponent(jLabel16)
-                        .addComponent(jLabel10))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel9)
-                        .addGap(6, 6, 6)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addComponent(jLabel11)
-                        .addGap(82, 82, 82)
-                        .addComponent(jLabel12)
-                        .addGap(93, 93, 93)
-                        .addComponent(jLabel13)
-                        .addGap(83, 83, 83)
-                        .addComponent(jLabel14)
-                        .addGap(87, 87, 87)
-                        .addComponent(jLabel15))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(PanelTabuleiro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(22, 22, 22)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel18)
+                                .addComponent(jLabel16)
+                                .addComponent(jLabel10))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(9, 9, 9)
-                                .addComponent(readyButton)
-                                .addGap(142, 142, 142)
-                                .addComponent(botaoDebug, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(140, 140, 140)
-                                .addComponent(limparTabuleiro)))))
-                .addGap(18, 18, 18)
-                .addComponent(selectionCombos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jButton26)
-                .addGap(306, 306, 306)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(42, 42, 42)
-                .addComponent(jLabel2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(jLabel9)
+                                .addGap(6, 6, 6)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(47, 47, 47)
+                                .addComponent(jLabel11)
+                                .addGap(82, 82, 82)
+                                .addComponent(jLabel12)
+                                .addGap(93, 93, 93)
+                                .addComponent(jLabel13)
+                                .addGap(83, 83, 83)
+                                .addComponent(jLabel14)
+                                .addGap(87, 87, 87)
+                                .addComponent(jLabel15))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(PanelTabuleiro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(9, 9, 9)
+                                        .addComponent(readyButton)
+                                        .addGap(139, 139, 139)
+                                        .addComponent(jButtonDebug)
+                                        .addGap(165, 165, 165)
+                                        .addComponent(limparTabuleiro)))))
+                        .addGap(18, 18, 18)
+                        .addComponent(selectionCombos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(jButton26)
+                        .addGap(306, 306, 306)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(42, 42, 42)
+                        .addComponent(jLabel2)))
+                .addContainerGap(74, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -827,7 +836,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
                         .addGap(22, 22, 22)
                         .addComponent(jButton26))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap(37, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1)
                             .addComponent(jLabel2))
@@ -855,11 +864,11 @@ public class TabuleiroSet extends javax.swing.JFrame {
                                     .addComponent(jLabel15))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(PanelTabuleiro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
+                                .addGap(23, 23, 23)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(limparTabuleiro)
-                                    .addComponent(botaoDebug)
-                                    .addComponent(readyButton))))
+                                    .addComponent(readyButton)
+                                    .addComponent(jButtonDebug))))
                         .addGap(68, 68, 68))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(selectionCombos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -945,7 +954,8 @@ public class TabuleiroSet extends javax.swing.JFrame {
     private void readyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_readyButtonActionPerformed
         addAction(PanelTabuleiro);
         limparTabuleiro.setEnabled(false);
-//        random.RandomAIPlace(evt, buttonArrayEnemy);
+        random.RandomAIPlace(evt, buttonArrayEnemy);
+        random.MostrarIcones(evt, buttonArrayEnemy, false);
 //        random.RandomAIPlace(evt, buttonArray);
     }//GEN-LAST:event_readyButtonActionPerformed
 
@@ -1166,6 +1176,12 @@ public class TabuleiroSet extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Button9BlueActionPerformed
 
+    private void jButtonDebugActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDebugActionPerformed
+        // TODO add your handling code here:
+        random.MostrarIcones(evt, buttonArrayEnemy, true);
+        jButtonDebug.setEnabled(false);
+    }//GEN-LAST:event_jButtonDebugActionPerformed
+
     private void refazerBotoes() {
         comboBandeira.setEnabled(true);
         comboEspiao1s.setEnabled(true);
@@ -1274,7 +1290,6 @@ public class TabuleiroSet extends javax.swing.JFrame {
     private javax.swing.JButton botaoBandeira;
     private javax.swing.JButton botaoBomba1;
     private javax.swing.JButton botaoBomba2;
-    private javax.swing.JButton botaoDebug;
     private javax.swing.JButton botaoDefuse3s1;
     private javax.swing.JButton botaoDefuse3s2;
     private javax.swing.JButton botaoEspiao1s;
@@ -1293,6 +1308,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> comboSoldado2s2;
     private javax.swing.JComboBox<String> comboSoldado2s3;
     private javax.swing.JButton jButton26;
+    private javax.swing.JButton jButtonDebug;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
