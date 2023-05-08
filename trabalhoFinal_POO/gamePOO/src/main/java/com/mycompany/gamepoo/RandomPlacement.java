@@ -7,7 +7,6 @@ package com.mycompany.gamepoo;
 import Pieces.*;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
-import java.awt.image.BufferedImage;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.util.Random;

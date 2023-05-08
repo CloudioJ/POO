@@ -27,7 +27,6 @@ public class ButtManager {
 						if (button.getIcon() != null && !button.getName().equals("Bomba") && !button.getName().equals("Bandeira")) {
 							botaoAnterior = button;
 							combate.setSecondClickTest(true);
-							System.out.println(botaoAnterior.getBackground().getRGB());
 						}
 					} else {
 						if (((button.getBounds().x == botaoAnterior.getBounds().x - 110 || botaoAnterior.getBounds().x + 110 == button.getBounds().x) && (button.getBounds().y == botaoAnterior.getBounds().y))

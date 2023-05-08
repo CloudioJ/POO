@@ -3,6 +3,7 @@ Pieces\Soldado.class
 com\mycompany\gamepoo\TabuleiroSet$26.class
 com\mycompany\gamepoo\TabuleiroSet$7.class
 com\mycompany\gamepoo\Menu$3.class
+com\mycompany\gamepoo\Combate.class
 com\mycompany\gamepoo\TabuleiroSet$4.class
 com\mycompany\gamepoo\TabuleiroRandom$1.class
 com\mycompany\gamepoo\TabuleiroRandom.class
@@ -11,6 +12,7 @@ com\mycompany\gamepoo\TabuleiroSet$32.class
 com\mycompany\gamepoo\TabuleiroSet$29.class
 com\mycompany\gamepoo\TabuleiroSet$12.class
 com\mycompany\gamepoo\TabuleiroSet$22.class
+com\mycompany\gamepoo\ButtManager.class
 com\mycompany\gamepoo\TabuleiroSet$10.class
 com\mycompany\gamepoo\TabuleiroSet$3.class
 com\mycompany\gamepoo\Menu$2.class
@@ -39,6 +41,7 @@ com\mycompany\gamepoo\TabuleiroSet$24.class
 com\mycompany\gamepoo\TabuleiroSet$27.class
 com\mycompany\gamepoo\TabuleiroSet$17.class
 com\mycompany\gamepoo\TabuleiroRandom$3.class
+com\mycompany\gamepoo\TabuleiroSet$35.class
 com\mycompany\gamepoo\TabuleiroSet$8.class
 com\mycompany\gamepoo\TabuleiroSet$20.class
 Pieces\Espião.class

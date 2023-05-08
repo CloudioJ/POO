@@ -5,16 +5,8 @@
 package com.mycompany.gamepoo;
 
 import Pieces.*;
-import java.awt.Component;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
-import java.util.LinkedList;
 import javax.swing.JButton;
-import javax.swing.JComboBox;
-import javax.swing.JDialog;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 
 /**
  *
@@ -42,20 +34,17 @@ public class TabuleiroSet extends javax.swing.JFrame{
 		buttonArrayEnemy[9] = Button10Blue;
 	}
 
-	private Peças bandeira = new Bandeira();
-	private Peças bomba1 = new Bomba();
-	private Peças bomba2 = new Bomba();
-	private Peças espiao = new Espião();
-	private Peças soldado1 = new Soldado();
-	private Peças soldado2 = new Soldado();
-	private Peças soldado3 = new Soldado();
-	private Peças armeiro1 = new Armeiro();
-	private Peças armeiro2 = new Armeiro();
-	private Peças marechal = new Marechal();
-	private boolean secondClickTest = false;
-	private JButton botaoAnterior;
-	private LinkedList<JButton> listaDeBotoes = new LinkedList<JButton>();
-	private JButton[][] botaoMatrix = new JButton[5][5];
+	private final Peças bandeira = new Bandeira();
+	private final Peças bomba1 = new Bomba();
+	private final Peças bomba2 = new Bomba();
+	private final Peças espiao = new Espião();
+	private final Peças soldado1 = new Soldado();
+	private final Peças soldado2 = new Soldado();
+	private final Peças soldado3 = new Soldado();
+	private final Peças armeiro1 = new Armeiro();
+	private final Peças armeiro2 = new Armeiro();
+	private final Peças marechal = new Marechal();
+	private final JButton[][] botaoMatrix = new JButton[5][5];
 
 	RandomPlacement random = new RandomPlacement();
 	ButtManager manager = new ButtManager();

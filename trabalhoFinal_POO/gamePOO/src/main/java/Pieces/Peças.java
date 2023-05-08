@@ -11,12 +11,10 @@ package Pieces;
 public class Peças {
     private String patente;
     private int nivel;
-    private boolean anda;
     
     public Peças(String patente, int nivel, boolean anda){
         this.patente = patente;
         this.nivel = nivel;
-        this.anda = anda;
     }
     
     public String getPatente(){
