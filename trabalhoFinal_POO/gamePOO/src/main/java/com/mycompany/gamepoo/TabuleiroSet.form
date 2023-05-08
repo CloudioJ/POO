@@ -160,42 +160,42 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="Buttom6Red" pref="92" max="32767" attributes="0"/>
-                      <Component id="Buttom1Red" max="32767" attributes="0"/>
-                      <Component id="jButton11" max="32767" attributes="0"/>
-                      <Component id="jButton6" max="32767" attributes="0"/>
-                      <Component id="jButton1" max="32767" attributes="0"/>
+                      <Component id="Button20Red" pref="92" max="32767" attributes="0"/>
+                      <Component id="Button15Red" max="32767" attributes="0"/>
+                      <Component id="Button11White" max="32767" attributes="0"/>
+                      <Component id="Button6Blue" max="32767" attributes="0"/>
+                      <Component id="Button1Blue" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="jButton2" max="32767" attributes="0"/>
-                      <Component id="jButton7" max="32767" attributes="0"/>
-                      <Component id="jButton12" max="32767" attributes="0"/>
-                      <Component id="Buttom2Red" max="32767" attributes="0"/>
-                      <Component id="Buttom7Red" pref="92" max="32767" attributes="0"/>
+                      <Component id="Button2Blue" max="32767" attributes="0"/>
+                      <Component id="Button7Blue" max="32767" attributes="0"/>
+                      <Component id="Button12White" max="32767" attributes="0"/>
+                      <Component id="Button16Red" max="32767" attributes="0"/>
+                      <Component id="Button21Red" pref="92" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="jButton4" max="32767" attributes="0"/>
-                      <Component id="jButton8" max="32767" attributes="0"/>
-                      <Component id="Buttom3Red" max="32767" attributes="0"/>
-                      <Component id="Buttom8Red" pref="92" max="32767" attributes="0"/>
+                      <Component id="Button3Blue" max="32767" attributes="0"/>
+                      <Component id="Button8Blue" max="32767" attributes="0"/>
+                      <Component id="Button17Red" max="32767" attributes="0"/>
+                      <Component id="Button22Red" pref="92" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="jButton5" max="32767" attributes="0"/>
-                      <Component id="jButton9" max="32767" attributes="0"/>
-                      <Component id="Buttom4Red" max="32767" attributes="0"/>
-                      <Component id="Buttom9Red" pref="92" max="32767" attributes="0"/>
-                      <Component id="jButton13" alignment="0" max="32767" attributes="0"/>
+                      <Component id="Button4Blue" max="32767" attributes="0"/>
+                      <Component id="Button9Blue" max="32767" attributes="0"/>
+                      <Component id="Button18Red" max="32767" attributes="0"/>
+                      <Component id="Button23Red" pref="92" max="32767" attributes="0"/>
+                      <Component id="Button13White" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jButton3" max="32767" attributes="0"/>
-                      <Component id="jButton10" max="32767" attributes="0"/>
-                      <Component id="Buttom5Red" max="32767" attributes="0"/>
-                      <Component id="Buttom10Red" pref="91" max="32767" attributes="0"/>
-                      <Component id="jButton14" alignment="0" max="32767" attributes="0"/>
+                      <Component id="Button5Blue" max="32767" attributes="0"/>
+                      <Component id="Button10Blue" max="32767" attributes="0"/>
+                      <Component id="Button19Red" max="32767" attributes="0"/>
+                      <Component id="Button24Red" pref="91" max="32767" attributes="0"/>
+                      <Component id="Button14White" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" max="-2" attributes="0"/>
               </Group>
@@ -206,42 +206,42 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButton2" alignment="3" min="-2" pref="86" max="-2" attributes="0"/>
-                      <Component id="jButton4" alignment="3" min="-2" pref="86" max="-2" attributes="0"/>
-                      <Component id="jButton3" alignment="3" min="-2" pref="86" max="-2" attributes="0"/>
-                      <Component id="jButton5" alignment="3" min="-2" pref="86" max="-2" attributes="0"/>
-                      <Component id="jButton1" min="-2" pref="86" max="-2" attributes="0"/>
+                      <Component id="Button2Blue" alignment="3" min="-2" pref="86" max="-2" attributes="0"/>
+                      <Component id="Button3Blue" alignment="3" min="-2" pref="86" max="-2" attributes="0"/>
+                      <Component id="Button5Blue" alignment="3" min="-2" pref="86" max="-2" attributes="0"/>
+                      <Component id="Button4Blue" alignment="3" min="-2" pref="86" max="-2" attributes="0"/>
+                      <Component id="Button1Blue" min="-2" pref="86" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="jButton6" max="32767" attributes="0"/>
-                      <Component id="jButton7" max="32767" attributes="0"/>
-                      <Component id="jButton8" max="32767" attributes="0"/>
-                      <Component id="jButton9" max="32767" attributes="0"/>
-                      <Component id="jButton10" pref="86" max="32767" attributes="0"/>
+                      <Component id="Button6Blue" max="32767" attributes="0"/>
+                      <Component id="Button7Blue" max="32767" attributes="0"/>
+                      <Component id="Button8Blue" max="32767" attributes="0"/>
+                      <Component id="Button9Blue" max="32767" attributes="0"/>
+                      <Component id="Button10Blue" pref="86" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="jButton11" max="32767" attributes="0"/>
-                      <Component id="jButton12" max="32767" attributes="0"/>
-                      <Component id="jButton14" alignment="0" pref="86" max="32767" attributes="0"/>
-                      <Component id="jButton13" alignment="0" max="32767" attributes="0"/>
+                      <Component id="Button11White" max="32767" attributes="0"/>
+                      <Component id="Button12White" max="32767" attributes="0"/>
+                      <Component id="Button14White" alignment="0" pref="86" max="32767" attributes="0"/>
+                      <Component id="Button13White" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="Buttom3Red" max="32767" attributes="0"/>
-                      <Component id="Buttom1Red" max="32767" attributes="0"/>
-                      <Component id="Buttom2Red" max="32767" attributes="0"/>
-                      <Component id="Buttom4Red" max="32767" attributes="0"/>
-                      <Component id="Buttom5Red" pref="86" max="32767" attributes="0"/>
+                      <Component id="Button17Red" max="32767" attributes="0"/>
+                      <Component id="Button15Red" max="32767" attributes="0"/>
+                      <Component id="Button16Red" max="32767" attributes="0"/>
+                      <Component id="Button18Red" max="32767" attributes="0"/>
+                      <Component id="Button19Red" pref="86" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="Buttom6Red" max="32767" attributes="0"/>
-                      <Component id="Buttom7Red" max="32767" attributes="0"/>
-                      <Component id="Buttom8Red" alignment="1" max="32767" attributes="0"/>
-                      <Component id="Buttom9Red" max="32767" attributes="0"/>
-                      <Component id="Buttom10Red" pref="86" max="32767" attributes="0"/>
+                      <Component id="Button20Red" max="32767" attributes="0"/>
+                      <Component id="Button21Red" max="32767" attributes="0"/>
+                      <Component id="Button22Red" alignment="1" max="32767" attributes="0"/>
+                      <Component id="Button23Red" max="32767" attributes="0"/>
+                      <Component id="Button24Red" pref="86" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -249,149 +249,149 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="Button1Blue">
           <Properties>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="focusPainted" type="boolean" value="false"/>
             <Property name="name" type="java.lang.String" value="4-0" noResource="true"/>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton1MouseClicked"/>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="Button1BlueMouseClicked"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Button1BlueActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="Button2Blue">
           <Properties>
             <Property name="name" type="java.lang.String" value="4-1" noResource="true"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton3">
+        <Component class="javax.swing.JButton" name="Button5Blue">
           <Properties>
             <Property name="name" type="java.lang.String" value="4-4" noResource="true"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton4">
+        <Component class="javax.swing.JButton" name="Button3Blue">
           <Properties>
             <Property name="name" type="java.lang.String" value="4-2" noResource="true"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton5">
+        <Component class="javax.swing.JButton" name="Button4Blue">
           <Properties>
             <Property name="name" type="java.lang.String" value="4-3" noResource="true"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton5ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Button4BlueActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton6">
+        <Component class="javax.swing.JButton" name="Button6Blue">
           <Properties>
             <Property name="name" type="java.lang.String" value="3-0" noResource="true"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton7">
+        <Component class="javax.swing.JButton" name="Button7Blue">
           <Properties>
             <Property name="name" type="java.lang.String" value="3-1" noResource="true"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton8">
+        <Component class="javax.swing.JButton" name="Button8Blue">
           <Properties>
             <Property name="name" type="java.lang.String" value="3-2" noResource="true"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton9">
+        <Component class="javax.swing.JButton" name="Button9Blue">
           <Properties>
             <Property name="name" type="java.lang.String" value="3-3" noResource="true"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton9ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Button9BlueActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton10">
+        <Component class="javax.swing.JButton" name="Button10Blue">
           <Properties>
             <Property name="name" type="java.lang.String" value="3-4" noResource="true"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton11">
+        <Component class="javax.swing.JButton" name="Button11White">
           <Properties>
             <Property name="name" type="java.lang.String" value="2-0" noResource="true"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton11ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Button11WhiteActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton12">
+        <Component class="javax.swing.JButton" name="Button12White">
           <Properties>
             <Property name="name" type="java.lang.String" value="10" noResource="true"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton12ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Button12WhiteActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton13">
+        <Component class="javax.swing.JButton" name="Button13White">
           <Properties>
             <Property name="name" type="java.lang.String" value="2-3" noResource="true"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton14">
+        <Component class="javax.swing.JButton" name="Button14White">
           <Properties>
             <Property name="name" type="java.lang.String" value="2-4" noResource="true"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="Buttom1Red">
+        <Component class="javax.swing.JButton" name="Button15Red">
           <Properties>
             <Property name="name" type="java.lang.String" value="" noResource="true"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Buttom1RedActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Button15RedActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="Buttom2Red">
+        <Component class="javax.swing.JButton" name="Button16Red">
           <Properties>
             <Property name="name" type="java.lang.String" value="" noResource="true"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="Buttom3Red">
+        <Component class="javax.swing.JButton" name="Button17Red">
           <Properties>
             <Property name="name" type="java.lang.String" value="" noResource="true"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Buttom3RedActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Button17RedActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="Buttom4Red">
+        <Component class="javax.swing.JButton" name="Button18Red">
           <Properties>
             <Property name="name" type="java.lang.String" value="" noResource="true"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="Buttom5Red">
+        <Component class="javax.swing.JButton" name="Button19Red">
           <Properties>
             <Property name="name" type="java.lang.String" value="" noResource="true"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="Buttom6Red">
+        <Component class="javax.swing.JButton" name="Button20Red">
           <Properties>
             <Property name="name" type="java.lang.String" value="" noResource="true"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Buttom6RedActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="Button20RedActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="Buttom7Red">
+        <Component class="javax.swing.JButton" name="Button21Red">
           <Properties>
             <Property name="name" type="java.lang.String" value="" noResource="true"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="Buttom8Red">
+        <Component class="javax.swing.JButton" name="Button22Red">
           <Properties>
             <Property name="name" type="java.lang.String" value="" noResource="true"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="Buttom9Red">
+        <Component class="javax.swing.JButton" name="Button23Red">
           <Properties>
             <Property name="name" type="java.lang.String" value="" noResource="true"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="Buttom10Red">
+        <Component class="javax.swing.JButton" name="Button24Red">
           <Properties>
             <Property name="name" type="java.lang.String" value="" noResource="true"/>
           </Properties>

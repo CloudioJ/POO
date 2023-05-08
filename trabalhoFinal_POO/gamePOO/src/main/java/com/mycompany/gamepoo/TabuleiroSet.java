@@ -138,30 +138,30 @@ public class TabuleiroSet extends javax.swing.JFrame {
     private void initComponents() {
 
         PanelTabuleiro = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
-        Buttom1Red = new javax.swing.JButton();
-        Buttom2Red = new javax.swing.JButton();
-        Buttom3Red = new javax.swing.JButton();
-        Buttom4Red = new javax.swing.JButton();
-        Buttom5Red = new javax.swing.JButton();
-        Buttom6Red = new javax.swing.JButton();
-        Buttom7Red = new javax.swing.JButton();
-        Buttom8Red = new javax.swing.JButton();
-        Buttom9Red = new javax.swing.JButton();
-        Buttom10Red = new javax.swing.JButton();
+        Button1Blue = new javax.swing.JButton();
+        Button2Blue = new javax.swing.JButton();
+        Button5Blue = new javax.swing.JButton();
+        Button3Blue = new javax.swing.JButton();
+        Button4Blue = new javax.swing.JButton();
+        Button6Blue = new javax.swing.JButton();
+        Button7Blue = new javax.swing.JButton();
+        Button8Blue = new javax.swing.JButton();
+        Button9Blue = new javax.swing.JButton();
+        Button10Blue = new javax.swing.JButton();
+        Button11White = new javax.swing.JButton();
+        Button12White = new javax.swing.JButton();
+        Button13White = new javax.swing.JButton();
+        Button14White = new javax.swing.JButton();
+        Button15Red = new javax.swing.JButton();
+        Button16Red = new javax.swing.JButton();
+        Button17Red = new javax.swing.JButton();
+        Button18Red = new javax.swing.JButton();
+        Button19Red = new javax.swing.JButton();
+        Button20Red = new javax.swing.JButton();
+        Button21Red = new javax.swing.JButton();
+        Button22Red = new javax.swing.JButton();
+        Button23Red = new javax.swing.JButton();
+        Button24Red = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jButton26 = new javax.swing.JButton();
@@ -210,100 +210,100 @@ public class TabuleiroSet extends javax.swing.JFrame {
 
         PanelTabuleiro.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, java.awt.Color.black));
 
-        jButton1.setToolTipText("");
-        jButton1.setFocusPainted(false);
-        jButton1.setName("4-0"); // NOI18N
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        Button1Blue.setToolTipText("");
+        Button1Blue.setFocusPainted(false);
+        Button1Blue.setName("4-0"); // NOI18N
+        Button1Blue.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                Button1BlueMouseClicked(evt);
             }
         });
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Button1Blue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                Button1BlueActionPerformed(evt);
             }
         });
 
-        jButton2.setName("4-1"); // NOI18N
+        Button2Blue.setName("4-1"); // NOI18N
 
-        jButton3.setName("4-4"); // NOI18N
+        Button5Blue.setName("4-4"); // NOI18N
 
-        jButton4.setName("4-2"); // NOI18N
+        Button3Blue.setName("4-2"); // NOI18N
 
-        jButton5.setName("4-3"); // NOI18N
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        Button4Blue.setName("4-3"); // NOI18N
+        Button4Blue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                Button4BlueActionPerformed(evt);
             }
         });
 
-        jButton6.setName("3-0"); // NOI18N
+        Button6Blue.setName("3-0"); // NOI18N
 
-        jButton7.setName("3-1"); // NOI18N
+        Button7Blue.setName("3-1"); // NOI18N
 
-        jButton8.setName("3-2"); // NOI18N
+        Button8Blue.setName("3-2"); // NOI18N
 
-        jButton9.setName("3-3"); // NOI18N
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        Button9Blue.setName("3-3"); // NOI18N
+        Button9Blue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                Button9BlueActionPerformed(evt);
             }
         });
 
-        jButton10.setName("3-4"); // NOI18N
+        Button10Blue.setName("3-4"); // NOI18N
 
-        jButton11.setName("2-0"); // NOI18N
-        jButton11.addActionListener(new java.awt.event.ActionListener() {
+        Button11White.setName("2-0"); // NOI18N
+        Button11White.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
+                Button11WhiteActionPerformed(evt);
             }
         });
 
-        jButton12.setName("10"); // NOI18N
-        jButton12.addActionListener(new java.awt.event.ActionListener() {
+        Button12White.setName("10"); // NOI18N
+        Button12White.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton12ActionPerformed(evt);
+                Button12WhiteActionPerformed(evt);
             }
         });
 
-        jButton13.setName("2-3"); // NOI18N
+        Button13White.setName("2-3"); // NOI18N
 
-        jButton14.setName("2-4"); // NOI18N
+        Button14White.setName("2-4"); // NOI18N
 
-        Buttom1Red.setName(""); // NOI18N
-        Buttom1Red.addActionListener(new java.awt.event.ActionListener() {
+        Button15Red.setName(""); // NOI18N
+        Button15Red.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Buttom1RedActionPerformed(evt);
+                Button15RedActionPerformed(evt);
             }
         });
 
-        Buttom2Red.setName(""); // NOI18N
+        Button16Red.setName(""); // NOI18N
 
-        Buttom3Red.setName(""); // NOI18N
-        Buttom3Red.addActionListener(new java.awt.event.ActionListener() {
+        Button17Red.setName(""); // NOI18N
+        Button17Red.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Buttom3RedActionPerformed(evt);
+                Button17RedActionPerformed(evt);
             }
         });
 
-        Buttom4Red.setName(""); // NOI18N
+        Button18Red.setName(""); // NOI18N
 
-        Buttom5Red.setName(""); // NOI18N
+        Button19Red.setName(""); // NOI18N
 
-        Buttom6Red.setName(""); // NOI18N
-        Buttom6Red.addActionListener(new java.awt.event.ActionListener() {
+        Button20Red.setName(""); // NOI18N
+        Button20Red.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Buttom6RedActionPerformed(evt);
+                Button20RedActionPerformed(evt);
             }
         });
 
-        Buttom7Red.setName(""); // NOI18N
+        Button21Red.setName(""); // NOI18N
 
-        Buttom8Red.setName(""); // NOI18N
+        Button22Red.setName(""); // NOI18N
 
-        Buttom9Red.setName(""); // NOI18N
+        Button23Red.setName(""); // NOI18N
 
-        Buttom10Red.setName(""); // NOI18N
+        Button24Red.setName(""); // NOI18N
 
         javax.swing.GroupLayout PanelTabuleiroLayout = new javax.swing.GroupLayout(PanelTabuleiro);
         PanelTabuleiro.setLayout(PanelTabuleiroLayout);
@@ -312,38 +312,38 @@ public class TabuleiroSet extends javax.swing.JFrame {
             .addGroup(PanelTabuleiroLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(PanelTabuleiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(Buttom6Red, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE)
-                    .addComponent(Buttom1Red, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(Button20Red, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE)
+                    .addComponent(Button15Red, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Button11White, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Button6Blue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Button1Blue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(PanelTabuleiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Buttom2Red, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Buttom7Red, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE))
+                    .addComponent(Button2Blue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Button7Blue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Button12White, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Button16Red, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Button21Red, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(PanelTabuleiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Buttom3Red, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Buttom8Red, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE))
+                    .addComponent(Button3Blue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Button8Blue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Button17Red, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Button22Red, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(PanelTabuleiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Buttom4Red, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Buttom9Red, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE)
-                    .addComponent(jButton13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(Button4Blue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Button9Blue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Button18Red, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Button23Red, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE)
+                    .addComponent(Button13White, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(PanelTabuleiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Buttom5Red, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Buttom10Red, javax.swing.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE)
-                    .addComponent(jButton14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(Button5Blue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Button10Blue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Button19Red, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Button24Red, javax.swing.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE)
+                    .addComponent(Button14White, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         PanelTabuleiroLayout.setVerticalGroup(
@@ -351,38 +351,38 @@ public class TabuleiroSet extends javax.swing.JFrame {
             .addGroup(PanelTabuleiroLayout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addGroup(PanelTabuleiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Button2Blue, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Button3Blue, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Button5Blue, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Button4Blue, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Button1Blue, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(PanelTabuleiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE))
+                    .addComponent(Button6Blue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Button7Blue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Button8Blue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Button9Blue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Button10Blue, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(PanelTabuleiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton14, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE)
-                    .addComponent(jButton13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(Button11White, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Button12White, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Button14White, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE)
+                    .addComponent(Button13White, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(PanelTabuleiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(Buttom3Red, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Buttom1Red, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Buttom2Red, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Buttom4Red, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Buttom5Red, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE))
+                    .addComponent(Button17Red, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Button15Red, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Button16Red, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Button18Red, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Button19Red, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(PanelTabuleiroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(Buttom6Red, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Buttom7Red, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Buttom8Red, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Buttom9Red, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Buttom10Red, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE))
+                    .addComponent(Button20Red, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Button21Red, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Button22Red, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Button23Red, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Button24Red, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1207,16 +1207,30 @@ public class TabuleiroSet extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Buttom10Red;
-    private javax.swing.JButton Buttom1Red;
-    private javax.swing.JButton Buttom2Red;
-    private javax.swing.JButton Buttom3Red;
-    private javax.swing.JButton Buttom4Red;
-    private javax.swing.JButton Buttom5Red;
-    private javax.swing.JButton Buttom6Red;
-    private javax.swing.JButton Buttom7Red;
-    private javax.swing.JButton Buttom8Red;
-    private javax.swing.JButton Buttom9Red;
+    private javax.swing.JButton Button10Blue;
+    private javax.swing.JButton Button11White;
+    private javax.swing.JButton Button12White;
+    private javax.swing.JButton Button13White;
+    private javax.swing.JButton Button14White;
+    private javax.swing.JButton Button15Red;
+    private javax.swing.JButton Button16Red;
+    private javax.swing.JButton Button17Red;
+    private javax.swing.JButton Button18Red;
+    private javax.swing.JButton Button19Red;
+    private javax.swing.JButton Button1Blue;
+    private javax.swing.JButton Button20Red;
+    private javax.swing.JButton Button21Red;
+    private javax.swing.JButton Button22Red;
+    private javax.swing.JButton Button23Red;
+    private javax.swing.JButton Button24Red;
+    private javax.swing.JButton Button2Blue;
+    private javax.swing.JButton Button3Blue;
+    private javax.swing.JButton Button4Blue;
+    private javax.swing.JButton Button5Blue;
+    private javax.swing.JButton Button6Blue;
+    private javax.swing.JButton Button7Blue;
+    private javax.swing.JButton Button8Blue;
+    private javax.swing.JButton Button9Blue;
     private javax.swing.JPanel PanelTabuleiro;
     private javax.swing.JButton botaoBandeira;
     private javax.swing.JButton botaoBomba1;
@@ -1239,21 +1253,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> comboSoldado2s1;
     private javax.swing.JComboBox<String> comboSoldado2s2;
     private javax.swing.JComboBox<String> comboSoldado2s3;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton26;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
