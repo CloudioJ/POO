@@ -5,6 +5,7 @@
 package com.mycompany.gamepoo;
 
 import Pieces.*;
+import java.awt.BorderLayout;
 import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -13,6 +14,7 @@ import java.util.LinkedList;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -225,6 +227,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        PanelTabuleiro.setBackground(new java.awt.Color(128, 185, 24));
         PanelTabuleiro.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, java.awt.Color.black));
 
         Button1Blue.setBackground(new java.awt.Color(255, 102, 102));
@@ -826,7 +829,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(42, 42, 42)
                         .addComponent(jLabel2)))
-                .addContainerGap(74, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -884,28 +887,31 @@ public class TabuleiroSet extends javax.swing.JFrame {
     }//GEN-LAST:event_Button1BlueActionPerformed
 
     public JButton getButton(String local) {
-        if (local.equals("D1")) {
-            return this.Button15Red;
-        } else if (local.equals("D2")) {
-            return this.Button16Red;
-        } else if (local.equals("D3")) {
-            return this.Button17Red;
-        } else if (local.equals("D4")) {
-            return this.Button18Red;
-        } else if (local.equals("D5")) {
-            return this.Button19Red;
-        } else if (local.equals("E1")) {
-            return this.Button20Red;
-        } else if (local.equals("E2")) {
-            return this.Button21Red;
-        } else if (local.equals("E3")) {
-            return this.Button22Red;
-        } else if (local.equals("E4")) {
-            return this.Button23Red;
-        } else if (local.equals("E5")) {
-            return this.Button24Red;
+        JButton toReturn = new JButton();
+
+        switch (local) {
+            case "D1" ->
+                toReturn = Button15Red;
+            case "D2" ->
+                toReturn = Button16Red;
+            case "D3" ->
+                toReturn = Button17Red;
+            case "D4" ->
+                toReturn = Button18Red;
+            case "D5" ->
+                toReturn = Button19Red;
+            case "E1" ->
+                toReturn = Button20Red;
+            case "E2" ->
+                toReturn = Button21Red;
+            case "E3" ->
+                toReturn = Button22Red;
+            case "E4" ->
+                toReturn = Button23Red;
+            case "E5" ->
+                toReturn = Button24Red;
         }
-        return this.Button15Red;
+        return toReturn;
     }
 
     public void setButton(String local, Peças peça) {
