@@ -27,10 +27,10 @@ public class Peças {
     }
 
     public String getIcon(){
-        return "resources/" + getPatente() + ".png";
+        return "src/main/resources/" + getPatente() + ".png";
     }
     
     public String getIconEnemy(){
-        return "resources/circulo.png";
+        return "src/main/resources/circulo.png";
     }
 }

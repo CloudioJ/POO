@@ -41,6 +41,8 @@ public class TabuleiroSet extends javax.swing.JFrame {
         buttonArrayEnemy[7] = Button8Blue;
         buttonArrayEnemy[8] = Button9Blue;
         buttonArrayEnemy[9] = Button10Blue;
+
+        jButtonDebug.setEnabled(false);
     }
 
     private Peças bandeira = new Bandeira();
@@ -887,31 +889,28 @@ public class TabuleiroSet extends javax.swing.JFrame {
     }//GEN-LAST:event_Button1BlueActionPerformed
 
     public JButton getButton(String local) {
-        JButton toReturn = new JButton();
-
-        switch (local) {
-            case "D1" ->
-                toReturn = Button15Red;
-            case "D2" ->
-                toReturn = Button16Red;
-            case "D3" ->
-                toReturn = Button17Red;
-            case "D4" ->
-                toReturn = Button18Red;
-            case "D5" ->
-                toReturn = Button19Red;
-            case "E1" ->
-                toReturn = Button20Red;
-            case "E2" ->
-                toReturn = Button21Red;
-            case "E3" ->
-                toReturn = Button22Red;
-            case "E4" ->
-                toReturn = Button23Red;
-            case "E5" ->
-                toReturn = Button24Red;
+        if (local.equals("D1")) {
+            return this.Button15Red;
+        } else if (local.equals("D2")) {
+            return this.Button16Red;
+        } else if (local.equals("D3")) {
+            return this.Button17Red;
+        } else if (local.equals("D4")) {
+            return this.Button18Red;
+        } else if (local.equals("D5")) {
+            return this.Button19Red;
+        } else if (local.equals("E1")) {
+            return this.Button20Red;
+        } else if (local.equals("E2")) {
+            return this.Button21Red;
+        } else if (local.equals("E3")) {
+            return this.Button22Red;
+        } else if (local.equals("E4")) {
+            return this.Button23Red;
+        } else if (local.equals("E5")) {
+            return this.Button24Red;
         }
-        return toReturn;
+        return this.Button15Red;
     }
 
     public void setButton(String local, Peças peça) {
@@ -958,6 +957,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton26ActionPerformed
 
     private void readyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_readyButtonActionPerformed
+        jButtonDebug.setEnabled(true);
         addAction(PanelTabuleiro);
         limparTabuleiro.setEnabled(false);
         random.RandomAIPlace(evt, buttonArrayEnemy);
@@ -1143,6 +1143,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
             botaoBandeira.setEnabled(false);
             setName("Bandeira");
             removeItens(comboBandeira);
+//            verificacaoReady(comboBomba2);
         }
     }//GEN-LAST:event_comboBandeiraActionPerformed
 
@@ -1224,9 +1225,18 @@ public class TabuleiroSet extends javax.swing.JFrame {
         Button24Red.setIcon(null);
     }
 
-    private void refazerCombos() {
-
-    }
+//    private void verificacaoReady(JComboBox fonte) {
+//        Component[] components = selectionCombos.getComponents();
+//        for (Component component : components) {
+//            if (component instanceof JComboBox) {
+//                JComboBox comboBox = (JComboBox) component;
+//                if (comboBox.equals(fonte)) {
+//                    readyButton.setEnabled(false);
+//                }
+//            }
+//        }
+//    }
+    
 
     /**
      * @param args the command line arguments
@@ -1242,16 +1252,24 @@ public class TabuleiroSet extends javax.swing.JFrame {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
+
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TabuleiroSet.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TabuleiroSet.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TabuleiroSet.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TabuleiroSet.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TabuleiroSet.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TabuleiroSet.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TabuleiroSet.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TabuleiroSet.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>

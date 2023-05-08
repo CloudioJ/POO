@@ -12,13 +12,4 @@ public class Espião extends Peças{
     public Espião(){
         super("Espião",1, true);
     }
-    
-    @Override
-    public int combat(Peças peça2){
-        if(peça2.getNivel() == 10){
-            return getNivel();
-        }
-        
-        return peça2.getNivel();
-    }
 }
