@@ -7,6 +7,7 @@ package com.mycompany.gamepoo;
 import Pieces.*;
 import java.awt.BorderLayout;
 import java.awt.Component;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
@@ -17,6 +18,7 @@ import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -43,6 +45,8 @@ public class TabuleiroSet extends javax.swing.JFrame {
         buttonArrayEnemy[9] = Button10Blue;
 
         jButtonDebug.setEnabled(false);
+        ButtonDica.setEnabled(false);
+
     }
 
     private Peças bandeira = new Bandeira();
@@ -57,6 +61,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
     private Peças marechal = new Marechal();
     private boolean secondClickTest = false;
     private JButton botaoAnterior;
+    private JButton botaoDicaTeste;
 
     RandomPlacement random = new RandomPlacement();
 
@@ -185,7 +190,6 @@ public class TabuleiroSet extends javax.swing.JFrame {
         Button24Red = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jButton26 = new javax.swing.JButton();
         readyButton = new javax.swing.JButton();
         limparTabuleiro = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
@@ -226,8 +230,10 @@ public class TabuleiroSet extends javax.swing.JFrame {
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         jButtonDebug = new javax.swing.JButton();
+        buttonEncerrarJogo = new javax.swing.JButton();
+        ButtonDica = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         PanelTabuleiro.setBackground(new java.awt.Color(128, 185, 24));
         PanelTabuleiro.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, java.awt.Color.black));
@@ -433,14 +439,6 @@ public class TabuleiroSet extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel2.setText("Custom");
-
-        jButton26.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButton26.setText("Return");
-        jButton26.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton26ActionPerformed(evt);
-            }
-        });
 
         readyButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         readyButton.setText("Ready");
@@ -782,14 +780,36 @@ public class TabuleiroSet extends javax.swing.JFrame {
             }
         });
 
+        buttonEncerrarJogo.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        buttonEncerrarJogo.setText("Encerrar o Jogo");
+        buttonEncerrarJogo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonEncerrarJogoActionPerformed(evt);
+            }
+        });
+
+        ButtonDica.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        ButtonDica.setText("Dica");
+        ButtonDica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonDicaActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(22, 22, 22)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
+                        .addComponent(buttonEncerrarJogo)
+                        .addGap(238, 238, 238)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel2))
+                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -814,38 +834,32 @@ public class TabuleiroSet extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(PanelTabuleiro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(9, 9, 9)
                                         .addComponent(readyButton)
                                         .addGap(139, 139, 139)
                                         .addComponent(jButtonDebug)
                                         .addGap(165, 165, 165)
-                                        .addComponent(limparTabuleiro)))))
+                                        .addComponent(limparTabuleiro))
+                                    .addComponent(PanelTabuleiro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(18, 18, 18)
-                        .addComponent(selectionCombos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(28, 28, 28)
-                        .addComponent(jButton26)
-                        .addGap(306, 306, 306)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(42, 42, 42)
-                        .addComponent(jLabel2)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(selectionCombos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(ButtonDica)
+                                .addGap(49, 49, 49)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(jButton26))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(37, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2))
-                        .addGap(51, 51, 51)))
+                .addContainerGap(37, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel2)
+                    .addComponent(buttonEncerrarJogo)
+                    .addComponent(ButtonDica))
+                .addGap(48, 48, 48)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -949,19 +963,13 @@ public class TabuleiroSet extends javax.swing.JFrame {
         }
     }
 
-    private void jButton26ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26ActionPerformed
-        // TODO add your handling code here:
-        Menu m = new Menu();
-        this.dispose();
-        m.setVisible(true);
-    }//GEN-LAST:event_jButton26ActionPerformed
-
     private void readyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_readyButtonActionPerformed
         jButtonDebug.setEnabled(true);
         addAction(PanelTabuleiro);
         limparTabuleiro.setEnabled(false);
         random.RandomAIPlace(evt, buttonArrayEnemy);
         random.MostrarIcones(evt, buttonArrayEnemy, false);
+        ButtonDica.setEnabled(true);
 //        random.RandomAIPlace(evt, buttonArray);
     }//GEN-LAST:event_readyButtonActionPerformed
 
@@ -1189,6 +1197,31 @@ public class TabuleiroSet extends javax.swing.JFrame {
         jButtonDebug.setEnabled(false);
     }//GEN-LAST:event_jButtonDebugActionPerformed
 
+    private void buttonEncerrarJogoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonEncerrarJogoActionPerformed
+        // TODO add your handling code here:
+        FinalJogo fj = new FinalJogo();
+        fj.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_buttonEncerrarJogoActionPerformed
+
+    private void ButtonDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonDicaActionPerformed
+        // TODO add your handling code here:
+        Component[] components = PanelTabuleiro.getComponents();
+        for (Component component : components) {
+            if (component instanceof JButton) {
+                JButton button = (JButton) component;
+                button.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        if (button.getIcon() != null && !button.getName().equals("Bomba")) {
+                            botaoDicaTeste = button;
+                        }
+                    }
+                });
+            }
+        }
+    }//GEN-LAST:event_ButtonDicaActionPerformed
+
     private void refazerBotoes() {
         comboBandeira.setEnabled(true);
         comboEspiao1s.setEnabled(true);
@@ -1236,8 +1269,6 @@ public class TabuleiroSet extends javax.swing.JFrame {
 //            }
 //        }
 //    }
-    
-
     /**
      * @param args the command line arguments
      */
@@ -1310,6 +1341,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
     private javax.swing.JButton Button7Blue;
     private javax.swing.JButton Button8Blue;
     private javax.swing.JButton Button9Blue;
+    private javax.swing.JButton ButtonDica;
     private javax.swing.JPanel PanelTabuleiro;
     private javax.swing.JButton botaoBandeira;
     private javax.swing.JButton botaoBomba1;
@@ -1321,6 +1353,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
     private javax.swing.JButton botaoSoldado2s1;
     private javax.swing.JButton botaoSoldado2s2;
     private javax.swing.JButton botaoSoldado2s3;
+    private javax.swing.JButton buttonEncerrarJogo;
     private javax.swing.JComboBox<String> comboBandeira;
     private javax.swing.JComboBox<String> comboBomba1;
     private javax.swing.JComboBox<String> comboBomba2;
@@ -1331,7 +1364,6 @@ public class TabuleiroSet extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> comboSoldado2s1;
     private javax.swing.JComboBox<String> comboSoldado2s2;
     private javax.swing.JComboBox<String> comboSoldado2s3;
-    private javax.swing.JButton jButton26;
     private javax.swing.JButton jButtonDebug;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
