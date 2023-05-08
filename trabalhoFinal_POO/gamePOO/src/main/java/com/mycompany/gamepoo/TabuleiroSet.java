@@ -86,13 +86,9 @@ public class TabuleiroSet extends javax.swing.JFrame {
     }
 
     public void swapButtons(JButton botao1, JButton botao2) {
-        int botao1x = botao1.getBounds().x;
-        int botao1y = botao1.getBounds().y;
-        int botao1width = botao1.getBounds().width;
-        int botao1height = botao1.getBounds().height;
-
-        botao1.setBounds(botao2.getBounds().x, botao2.getBounds().y, botao2.getBounds().width, botao2.getBounds().height);
-        botao2.setBounds(botao1x, botao1y, botao1width, botao1height);
+        botao1.setIcon(botao2.getIcon());
+        botao1.setName(botao2.getName());
+        clearButton(botao2);
     }
 
     public void combate(JButton botao1, JButton botao2) {
