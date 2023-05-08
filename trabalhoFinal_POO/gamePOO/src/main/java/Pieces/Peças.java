@@ -27,17 +27,10 @@ public class Peças {
     }
 
     public String getIcon(){
-        return "F:\\POO Claudio 100%\\POO-main\\trabalhoFinal_POO\\gamePOO\\src\\main\\resources\\" + getPatente() + ".png";
+        return "resources/" + getPatente() + ".png";
     }
     
     public String getIconEnemy(){
-        return "F:\\POO Claudio 100%\\POO-main\\trabalhoFinal_POO\\gamePOO\\src\\main\\resources\\circulo.png";
-    }
-    
-    public int combat(Peças peça2){
-        if (getNivel() >= peça2.getNivel()){
-            return getNivel();
-        }
-        return peça2.getNivel();
+        return "resources/circulo.png";
     }
 }
