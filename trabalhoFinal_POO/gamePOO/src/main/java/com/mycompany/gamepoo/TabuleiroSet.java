@@ -25,8 +25,20 @@ public class TabuleiroSet extends javax.swing.JFrame {
     /**
      * Creates new form Tabuleiro
      */
+    final JButton[] buttonArrayEnemy = new JButton[10];
+    
     public TabuleiroSet() {
         initComponents();
+        buttonArrayEnemy[0] = Button1Blue;
+        buttonArrayEnemy[1] = Button2Blue;
+        buttonArrayEnemy[2] = Button3Blue;
+        buttonArrayEnemy[3] = Button4Blue;
+        buttonArrayEnemy[4] = Button5Blue;
+        buttonArrayEnemy[5] = Button6Blue;
+        buttonArrayEnemy[6] = Button7Blue;
+        buttonArrayEnemy[7] = Button8Blue;
+        buttonArrayEnemy[8] = Button9Blue;
+        buttonArrayEnemy[9] = Button10Blue;
     }
 
     private Peças bandeira = new Bandeira();
@@ -43,6 +55,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
     private JButton botaoAnterior;
 
     RandomPlacement random = new RandomPlacement();
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -89,6 +102,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
     public void swapButtons(JButton botao1, JButton botao2) {
         botao1.setIcon(botao2.getIcon());
         botao1.setName(botao2.getName());
+        botao1.setBackground(botao2.getBackground());
         clearButton(botao2);
     }
 
@@ -210,6 +224,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
 
         PanelTabuleiro.setBorder(javax.swing.BorderFactory.createEtchedBorder(java.awt.Color.white, java.awt.Color.black));
 
+        Button1Blue.setBackground(new java.awt.Color(255, 102, 102));
         Button1Blue.setToolTipText("");
         Button1Blue.setFocusPainted(false);
         Button1Blue.setName("4-0"); // NOI18N
@@ -224,12 +239,16 @@ public class TabuleiroSet extends javax.swing.JFrame {
             }
         });
 
+        Button2Blue.setBackground(new java.awt.Color(255, 102, 102));
         Button2Blue.setName("4-1"); // NOI18N
 
+        Button5Blue.setBackground(new java.awt.Color(255, 102, 102));
         Button5Blue.setName("4-4"); // NOI18N
 
+        Button3Blue.setBackground(new java.awt.Color(255, 102, 102));
         Button3Blue.setName("4-2"); // NOI18N
 
+        Button4Blue.setBackground(new java.awt.Color(255, 102, 102));
         Button4Blue.setName("4-3"); // NOI18N
         Button4Blue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -237,12 +256,16 @@ public class TabuleiroSet extends javax.swing.JFrame {
             }
         });
 
+        Button6Blue.setBackground(new java.awt.Color(255, 102, 102));
         Button6Blue.setName("3-0"); // NOI18N
 
+        Button7Blue.setBackground(new java.awt.Color(255, 102, 102));
         Button7Blue.setName("3-1"); // NOI18N
 
+        Button8Blue.setBackground(new java.awt.Color(255, 102, 102));
         Button8Blue.setName("3-2"); // NOI18N
 
+        Button9Blue.setBackground(new java.awt.Color(255, 102, 102));
         Button9Blue.setName("3-3"); // NOI18N
         Button9Blue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -250,6 +273,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
             }
         });
 
+        Button10Blue.setBackground(new java.awt.Color(255, 102, 102));
         Button10Blue.setName("3-4"); // NOI18N
 
         Button11White.setName("2-0"); // NOI18N
@@ -270,6 +294,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
 
         Button14White.setName("2-4"); // NOI18N
 
+        Button15Red.setBackground(new java.awt.Color(0, 153, 255));
         Button15Red.setName(""); // NOI18N
         Button15Red.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -277,8 +302,10 @@ public class TabuleiroSet extends javax.swing.JFrame {
             }
         });
 
+        Button16Red.setBackground(new java.awt.Color(0, 153, 255));
         Button16Red.setName(""); // NOI18N
 
+        Button17Red.setBackground(new java.awt.Color(0, 153, 255));
         Button17Red.setName(""); // NOI18N
         Button17Red.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -286,10 +313,13 @@ public class TabuleiroSet extends javax.swing.JFrame {
             }
         });
 
+        Button18Red.setBackground(new java.awt.Color(0, 153, 255));
         Button18Red.setName(""); // NOI18N
 
+        Button19Red.setBackground(new java.awt.Color(0, 153, 255));
         Button19Red.setName(""); // NOI18N
 
+        Button20Red.setBackground(new java.awt.Color(0, 153, 255));
         Button20Red.setName(""); // NOI18N
         Button20Red.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -297,12 +327,16 @@ public class TabuleiroSet extends javax.swing.JFrame {
             }
         });
 
+        Button21Red.setBackground(new java.awt.Color(0, 153, 255));
         Button21Red.setName(""); // NOI18N
 
+        Button22Red.setBackground(new java.awt.Color(0, 153, 255));
         Button22Red.setName(""); // NOI18N
 
+        Button23Red.setBackground(new java.awt.Color(0, 153, 255));
         Button23Red.setName(""); // NOI18N
 
+        Button24Red.setBackground(new java.awt.Color(0, 153, 255));
         Button24Red.setName(""); // NOI18N
 
         javax.swing.GroupLayout PanelTabuleiroLayout = new javax.swing.GroupLayout(PanelTabuleiro);
@@ -666,7 +700,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
         selectionCombosLayout.setVerticalGroup(
             selectionCombosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, selectionCombosLayout.createSequentialGroup()
-                .addContainerGap(42, Short.MAX_VALUE)
+                .addContainerGap(18, Short.MAX_VALUE)
                 .addGroup(selectionCombosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(selectionCombosLayout.createSequentialGroup()
                         .addGroup(selectionCombosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -709,7 +743,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
                             .addGroup(selectionCombosLayout.createSequentialGroup()
                                 .addGap(2, 2, 2)
                                 .addComponent(comboSoldado2s2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(selectionCombosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(botaoDefuse3s1)
                             .addComponent(jLabel7))))
@@ -826,7 +860,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
                                     .addComponent(limparTabuleiro)
                                     .addComponent(botaoDebug)
                                     .addComponent(readyButton))))
-                        .addGap(86, 86, 86))
+                        .addGap(68, 68, 68))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(selectionCombos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(56, 56, 56))))
@@ -873,6 +907,8 @@ public class TabuleiroSet extends javax.swing.JFrame {
 
     private void clearButton(JButton botao) {
         botao.setIcon(null);
+        botao.setName(null);
+        botao.setBackground(null);
     }
 
     private void removeItens(JComboBox fonte) {
@@ -908,6 +944,8 @@ public class TabuleiroSet extends javax.swing.JFrame {
 
     private void readyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_readyButtonActionPerformed
         addAction(PanelTabuleiro);
+        limparTabuleiro.setEnabled(false);
+//        random.RandomAIPlace(evt, buttonArrayEnemy);
 //        random.RandomAIPlace(evt, buttonArray);
     }//GEN-LAST:event_readyButtonActionPerformed
 
@@ -1108,6 +1146,7 @@ public class TabuleiroSet extends javax.swing.JFrame {
 //        Buttom1Red.getBounds();
 //        System.out.println(Buttom1Red.getBounds());
 //        System.out.println(Buttom1Red.getIcon());
+        System.out.println(Button15Red.getBackground());
     }//GEN-LAST:event_Button15RedActionPerformed
 
     private void Button12WhiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button12WhiteActionPerformed
