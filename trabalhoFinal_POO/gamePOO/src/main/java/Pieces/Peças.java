@@ -27,7 +27,7 @@ public class Peças {
     }
 
     public String getIcon(){
-        return "S:\\POO\\gamePOO\\src\\main\\resources\\" + getPatente() + ".png";
+        return "F:\\POO Claudio 100%\\POO-main\\trabalhoFinal_POO\\gamePOO\\src\\main\\resources\\" + getPatente() + ".png";
     }
     
     public int combat(Peças peça2){
