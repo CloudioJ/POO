@@ -8,12 +8,12 @@ package com.mycompany.gamepoo;
  *
  * @author Xablau
  */
-public class FinalJogo extends javax.swing.JFrame {
+public class FinalJogoRandom extends javax.swing.JFrame {
 
     /**
      * Creates new form FinalJogo
      */
-    public FinalJogo() {
+    public FinalJogoRandom() {
         initComponents();
     }
 
@@ -99,9 +99,9 @@ public class FinalJogo extends javax.swing.JFrame {
 
     private void buttonReiniciarJogoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonReiniciarJogoActionPerformed
         // TODO add your handling code here:
-        TabuleiroSet ts = new TabuleiroSet();
+        TabuleiroRandom1 tr1 = new TabuleiroRandom1();
         this.dispose();
-        ts.setVisible(true); 
+        tr1.setVisible(true);
     }//GEN-LAST:event_buttonReiniciarJogoActionPerformed
 
     private void buttonNovoJogoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonNovoJogoActionPerformed
@@ -133,20 +133,23 @@ public class FinalJogo extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FinalJogo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FinalJogoRandom.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FinalJogo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FinalJogoRandom.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FinalJogo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FinalJogoRandom.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FinalJogo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FinalJogoRandom.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FinalJogo().setVisible(true);
+                new FinalJogoRandom().setVisible(true);
             }
         });
     }

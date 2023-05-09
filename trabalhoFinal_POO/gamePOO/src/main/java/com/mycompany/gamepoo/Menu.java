@@ -80,7 +80,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        TabuleiroRandom tr = new TabuleiroRandom();
+        TabuleiroRandom1 tr = new TabuleiroRandom1();
         this.dispose();
         tr.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -89,7 +89,7 @@ public class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
         TabuleiroSet ts = new TabuleiroSet();
         this.dispose();
-        ts.setVisible(true); 
+        ts.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
