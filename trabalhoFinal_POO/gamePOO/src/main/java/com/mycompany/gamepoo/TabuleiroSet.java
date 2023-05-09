@@ -203,12 +203,16 @@ public class TabuleiroSet extends javax.swing.JFrame {
         Button10Blue.setBackground(new java.awt.Color(255, 102, 102));
         Button10Blue.setName("3-4"); // NOI18N
 
+        Button11White.setBackground(null);
         Button11White.setName("2-0"); // NOI18N
 
+        Button12White.setBackground(null);
         Button12White.setName("10"); // NOI18N
 
+        Button13White.setBackground(null);
         Button13White.setName("2-3"); // NOI18N
 
+        Button14White.setBackground(null);
         Button14White.setName("2-4"); // NOI18N
 
         Button15Red.setBackground(new java.awt.Color(0, 153, 255));
