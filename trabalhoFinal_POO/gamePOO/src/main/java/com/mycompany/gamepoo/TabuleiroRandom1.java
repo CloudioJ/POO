@@ -563,15 +563,16 @@ public class TabuleiroRandom1 extends javax.swing.JFrame {
         manager.addAction(PanelTabuleiro);
 //	addAction(PanelTabuleiro);
         setButtonsToMatrix();
-        limparTabuleiro.setEnabled(false);
         random.RandomAIPlace(evt, buttonArrayEnemyPC);
         random.MostrarIcones(evt, buttonArrayEnemy, false);
+        readyButton.setEnabled(false);
 //        random.RandomAIPlace(evt, buttonArray);
     }//GEN-LAST:event_readyButtonActionPerformed
 
     private void limparTabuleiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limparTabuleiroActionPerformed
         // TODO add your handling code here:
         limparBotoesTabuleiro();
+        readyButton.setEnabled(true);
     }//GEN-LAST:event_limparTabuleiroActionPerformed
 
     private void Button20RedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button20RedActionPerformed
