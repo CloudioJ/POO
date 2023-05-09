@@ -5,7 +5,6 @@
 package com.mycompany.gamepoo;
 
 import java.awt.Component;
-import java.awt.event.ActionEvent;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JPanel;
@@ -16,8 +15,6 @@ import javax.swing.JPanel;
  */
 public class ButtManager {
 	private final Combate combate = new Combate();
-	private JButton botaoAnterior = new JButton();
-	private boolean dica = false;
 	
 //	public void addAction(JPanel panel) {
 //		Component[] components = panel.getComponents();
@@ -85,21 +82,11 @@ public class ButtManager {
 	public void checkForBomba(JButton[][] buttonMatrix, JButton button){
 		int x = 0, contador = 0;
 		switch(button.getBounds().x){
-			case 8:
-				x = 0;
-				break;
-			case 118:
-				x = 1;
-				break;
-			case 228:
-				x = 2;
-				break;
-			case 338:
-				x = 3;
-				break;
-			case 448:
-				x = 4;
-				break;
+			case 8 -> x = 0;
+			case 118 -> x = 1;
+			case 228 -> x = 2;
+			case 338 -> x = 3;
+			case 448 -> x = 4;
 		}
 		
 		for (int i = 0; i < 5; i++){

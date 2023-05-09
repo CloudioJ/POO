@@ -116,8 +116,8 @@ public class TabuleiroRandom1 extends javax.swing.JFrame {
 		botaoMatrix[1][4] = Button10Blue;
 		botaoMatrix[2][0] = Button11White;
 		botaoMatrix[2][1] = Button12White;
-		botaoMatrix[2][2] = Button13White;
-		botaoMatrix[2][3] = Button14White;
+		botaoMatrix[2][3] = Button13White;
+		botaoMatrix[2][4] = Button14White;
 //		botaoMatrix[2][4] = (Button15White;
 		botaoMatrix[3][0] = Button15Red;
 		botaoMatrix[3][1] = Button16Red;
