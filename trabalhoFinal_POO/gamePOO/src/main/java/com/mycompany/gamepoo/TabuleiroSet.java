@@ -811,16 +811,11 @@ public class TabuleiroSet extends javax.swing.JFrame {
                     continue; // Ignora o botão nulo e continua o loop
                 }
                 String nomeIcone = botao.getName();
-                if ("Bomba".equals(nomeIcone)) {
-                    System.out.println("Button at row " + i + ", col " + colunaAtual + " has an icon");
-                } else {
-                    System.out.println("Button at row " + i + ", col " + colunaAtual + " does not have an icon");
-                }
                 botao.addActionListener((ActionEvent e) -> {
                     if ("Bomba".equals(nomeIcone)) {
-                        System.out.println("Button icon = null");
+                        System.out.println(" coluna " + colunaAtual + " tem uma bomba");
                     } else {
-                        System.out.println("Button icon == null");
+                        System.out.println(" coluna " + colunaAtual + " nao tem uma bomba");
                     }
                 });
             }
