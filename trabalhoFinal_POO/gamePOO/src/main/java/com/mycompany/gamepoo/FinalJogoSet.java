@@ -100,25 +100,10 @@ public class FinalJogoSet extends javax.swing.JFrame {
     private void buttonReiniciarJogoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonReiniciarJogoActionPerformed
         // TODO add your handling code here:
         TabuleiroSet ts = new TabuleiroSet();
-        TabuleiroRandom1 tr1 = new TabuleiroRandom1();
-        if (ts.isVisible()) {
-            verificarTela(true);
-        } else if (tr1.isVisible()) {
-            verificarTela(false);
-        }
+        this.dispose();
+        ts.setVisible(true);
     }//GEN-LAST:event_buttonReiniciarJogoActionPerformed
 
-    private void verificarTela(boolean verificar) {
-        if (verificar == true) {
-            TabuleiroSet ts = new TabuleiroSet();
-            this.dispose();
-            ts.setVisible(true);
-        } else {
-            TabuleiroRandom1 tr1 = new TabuleiroRandom1();
-            this.dispose();
-            tr1.setVisible(true);
-        }
-    }
 
     private void buttonNovoJogoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonNovoJogoActionPerformed
         // TODO add your handling code here:

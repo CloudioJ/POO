@@ -167,16 +167,6 @@ public class TabuleiroSet extends javax.swing.JFrame {
         Button1Blue.setToolTipText("");
         Button1Blue.setFocusPainted(false);
         Button1Blue.setName("4-0"); // NOI18N
-        Button1Blue.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                Button1BlueMouseClicked(evt);
-            }
-        });
-        Button1Blue.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Button1BlueActionPerformed(evt);
-            }
-        });
 
         Button2Blue.setBackground(new java.awt.Color(255, 102, 102));
         Button2Blue.setName("4-1"); // NOI18N
@@ -189,11 +179,6 @@ public class TabuleiroSet extends javax.swing.JFrame {
 
         Button4Blue.setBackground(new java.awt.Color(255, 102, 102));
         Button4Blue.setName("4-3"); // NOI18N
-        Button4Blue.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Button4BlueActionPerformed(evt);
-            }
-        });
 
         Button6Blue.setBackground(new java.awt.Color(255, 102, 102));
         Button6Blue.setName("3-0"); // NOI18N
@@ -206,28 +191,13 @@ public class TabuleiroSet extends javax.swing.JFrame {
 
         Button9Blue.setBackground(new java.awt.Color(255, 102, 102));
         Button9Blue.setName("3-3"); // NOI18N
-        Button9Blue.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Button9BlueActionPerformed(evt);
-            }
-        });
 
         Button10Blue.setBackground(new java.awt.Color(255, 102, 102));
         Button10Blue.setName("3-4"); // NOI18N
 
         Button11White.setName("2-0"); // NOI18N
-        Button11White.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Button11WhiteActionPerformed(evt);
-            }
-        });
 
         Button12White.setName("10"); // NOI18N
-        Button12White.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Button12WhiteActionPerformed(evt);
-            }
-        });
 
         Button13White.setName("2-3"); // NOI18N
 
@@ -411,11 +381,6 @@ public class TabuleiroSet extends javax.swing.JFrame {
         jLabel15.setText("5");
 
         botaoBandeira.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Bandeira.png"))); // NOI18N
-        botaoBandeira.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botaoBandeiraActionPerformed(evt);
-            }
-        });
 
         comboBandeira.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select", "D1", "D2", "D3", "D4", "D5", "E1", "E2", "E3", "E4", "E5" }));
         comboBandeira.addActionListener(new java.awt.event.ActionListener() {
@@ -751,7 +716,8 @@ public class TabuleiroSet extends javax.swing.JFrame {
                                         .addGap(165, 165, 165)
                                         .addComponent(limparTabuleiro)))
                                 .addGap(18, 18, 18)
-                                .addComponent(selectionCombos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(selectionCombos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(47, 47, 47)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -767,24 +733,29 @@ public class TabuleiroSet extends javax.swing.JFrame {
                                         .addGap(87, 87, 87)
                                         .addComponent(jLabel15)))
                                 .addGap(18, 18, 18)
-                                .addComponent(jLabel2)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(botaoDica)
+                                .addGap(63, 63, 63))))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton26)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(botaoDica)
-                        .addGap(65, 65, 65))))
+                        .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(37, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2)
-                    .addComponent(botaoDica)
-                    .addComponent(jButton26))
-                .addGap(48, 48, 48)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(37, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2)
+                            .addComponent(jButton26))
+                        .addGap(48, 48, 48))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(53, 53, 53)
+                        .addComponent(botaoDica)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -822,10 +793,6 @@ public class TabuleiroSet extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void Button1BlueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button1BlueActionPerformed
-
-    }//GEN-LAST:event_Button1BlueActionPerformed
 
     public JButton getButton(String local) {
         JButton toReturn = new JButton();
@@ -1060,18 +1027,6 @@ public class TabuleiroSet extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_comboBandeiraActionPerformed
 
-    private void botaoBandeiraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoBandeiraActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_botaoBandeiraActionPerformed
-
-    private void Button4BlueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button4BlueActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Button4BlueActionPerformed
-
-    private void Button1BlueMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button1BlueMouseClicked
-
-    }//GEN-LAST:event_Button1BlueMouseClicked
-
     private void Button15RedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button15RedActionPerformed
 //        Buttom1Red.getBounds();
 //        System.out.println(Buttom1Red.getBounds());
@@ -1079,22 +1034,9 @@ public class TabuleiroSet extends javax.swing.JFrame {
 //        System.out.println(Button15Red.getBackground());
     }//GEN-LAST:event_Button15RedActionPerformed
 
-    private void Button12WhiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button12WhiteActionPerformed
-//        jButton12.setIcon(new ImageIcon(this.marechal.getIcon()));
-//        setButtonActionListener(jButton12, this.marechal);
-    }//GEN-LAST:event_Button12WhiteActionPerformed
-
-    private void Button11WhiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button11WhiteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Button11WhiteActionPerformed
-
     private void Button17RedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button17RedActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Button17RedActionPerformed
-
-    private void Button9BlueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button9BlueActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Button9BlueActionPerformed
 
     private void jButtonDebugActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDebugActionPerformed
         // TODO add your handling code here:
