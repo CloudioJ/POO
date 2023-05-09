@@ -5,8 +5,11 @@
 package com.mycompany.gamepoo;
 
 import Pieces.*;
+import java.awt.Component;
+import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JPanel;
 
 /**
  *
@@ -14,89 +17,122 @@ import javax.swing.JButton;
  */
 public class TabuleiroRandom1 extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Tabuleiro
-     */
-    final JButton[] buttonArrayEnemy = new JButton[10];
-    final JButton[] buttonArrayEnemyPC = new JButton[10];
+	/**
+	 * Creates new form Tabuleiro
+	 */
+	final JButton[] buttonArrayEnemy = new JButton[10];
+	final JButton[] buttonArrayEnemyPC = new JButton[10];
+	private JButton botaoAnterior;
+	private Combate combate = new Combate();
+	private int totalDicas = 2;
+	private boolean dica = false;
 
-    public TabuleiroRandom1() {
-        initComponents();
-        setButtonsToMatrix();
-        buttonArrayEnemy[0] = Button1Blue;
-        buttonArrayEnemy[1] = Button2Blue;
-        buttonArrayEnemy[2] = Button3Blue;
-        buttonArrayEnemy[3] = Button4Blue;
-        buttonArrayEnemy[4] = Button5Blue;
-        buttonArrayEnemy[5] = Button6Blue;
-        buttonArrayEnemy[6] = Button7Blue;
-        buttonArrayEnemy[7] = Button8Blue;
-        buttonArrayEnemy[8] = Button9Blue;
-        buttonArrayEnemy[9] = Button10Blue;
-        
-        buttonArrayEnemyPC[0] = Button15Red;
-        buttonArrayEnemyPC[1] = Button16Red;
-        buttonArrayEnemyPC[2] = Button17Red;
-        buttonArrayEnemyPC[3] = Button18Red;
-        buttonArrayEnemyPC[4] = Button19Red;
-        buttonArrayEnemyPC[5] = Button20Red;
-        buttonArrayEnemyPC[6] = Button21Red;
-        buttonArrayEnemyPC[7] = Button22Red;
-        buttonArrayEnemyPC[8] = Button23Red;
-        buttonArrayEnemyPC[9] = Button24Red;
-    }
+	public TabuleiroRandom1() {
+		initComponents();
+		setButtonsToMatrix();
+		buttonArrayEnemy[0] = Button1Blue;
+		buttonArrayEnemy[1] = Button2Blue;
+		buttonArrayEnemy[2] = Button3Blue;
+		buttonArrayEnemy[3] = Button4Blue;
+		buttonArrayEnemy[4] = Button5Blue;
+		buttonArrayEnemy[5] = Button6Blue;
+		buttonArrayEnemy[6] = Button7Blue;
+		buttonArrayEnemy[7] = Button8Blue;
+		buttonArrayEnemy[8] = Button9Blue;
+		buttonArrayEnemy[9] = Button10Blue;
 
-    private final Peças bandeira = new Bandeira();
-    private final Peças bomba1 = new Bomba();
-    private final Peças bomba2 = new Bomba();
-    private final Peças espiao = new Espião();
-    private final Peças soldado1 = new Soldado();
-    private final Peças soldado2 = new Soldado();
-    private final Peças soldado3 = new Soldado();
-    private final Peças armeiro1 = new Armeiro();
-    private final Peças armeiro2 = new Armeiro();
-    private final Peças marechal = new Marechal();
-    private final JButton[][] botaoMatrix = new JButton[5][5];
+		buttonArrayEnemyPC[0] = Button15Red;
+		buttonArrayEnemyPC[1] = Button16Red;
+		buttonArrayEnemyPC[2] = Button17Red;
+		buttonArrayEnemyPC[3] = Button18Red;
+		buttonArrayEnemyPC[4] = Button19Red;
+		buttonArrayEnemyPC[5] = Button20Red;
+		buttonArrayEnemyPC[6] = Button21Red;
+		buttonArrayEnemyPC[7] = Button22Red;
+		buttonArrayEnemyPC[8] = Button23Red;
+		buttonArrayEnemyPC[9] = Button24Red;
+	}
 
-    RandomPlacement random = new RandomPlacement();
-    ButtManager manager = new ButtManager();
+	public void addAction(JPanel panel) {
+		Component[] components = panel.getComponents();
+		for (Component component : components) {
+			if (component instanceof JButton button) {
+				button.addActionListener((ActionEvent e) -> {
+					if (dica) {
+						manager.checkForBomba(botaoMatrix, button);
+						dica = false;
+						totalDicas--;
+						if (totalDicas == 0) {
+							botaoDica.setEnabled(false);
+						}
+						return;
+					}
+					if (!combate.getSecondClickTest()) {
+						if (button.getIcon() != null && !button.getName().equals("Bomba") && !button.getName().equals("Bandeira")) {
+							botaoAnterior = button;
+							combate.setSecondClickTest(true);
+						}
+					} else {
+						if (((button.getBounds().x == botaoAnterior.getBounds().x - 110 || botaoAnterior.getBounds().x + 110 == button.getBounds().x) && (button.getBounds().y == botaoAnterior.getBounds().y))
+								|| ((button.getBounds().y == botaoAnterior.getBounds().y + 104 || button.getBounds().y == botaoAnterior.getBounds().y - 104) && (button.getBounds().x == botaoAnterior.getBounds().x))) {
+							if (button.getIcon() == null && !botaoAnterior.getName().equals("Bomba") && !botaoAnterior.getName().equals("Bandeira")) {
+								manager.swapButtons(button, botaoAnterior);
+								combate.setSecondClickTest(false);
+							} else if (button.getBackground().getRGB() != botaoAnterior.getBackground().getRGB()) {
+								combate.combate(botaoAnterior, button);
+								combate.setSecondClickTest(false);
+							}
+						} else {
+							combate.setSecondClickTest(false);
+						}
+						combate.setSecondClickTest(false);
+					}
+				});
+			}
+		}
+	}
+	
+	private final JButton[][] botaoMatrix = new JButton[5][5];
 
-    /**
-     * This method is called from within the constructor to initialize the form.
-     * WARNING: Do NOT modify this code. The content of this method is always
-     * regenerated by the Form Editor.
-     */
-    // + 110 X ------------ + 104 Y
-    private void setButtonsToMatrix() {
-        botaoMatrix[0][0] = Button1Blue;
-        botaoMatrix[0][1] = Button2Blue;
-        botaoMatrix[0][2] = Button3Blue;
-        botaoMatrix[0][3] = Button4Blue;
-        botaoMatrix[0][4] = Button5Blue;
-        botaoMatrix[1][0] = Button6Blue;
-        botaoMatrix[1][1] = Button7Blue;
-        botaoMatrix[1][2] = Button8Blue;
-        botaoMatrix[1][3] = Button9Blue;
-        botaoMatrix[1][4] = Button10Blue;
-        botaoMatrix[2][0] = Button11White;
-        botaoMatrix[2][1] = Button12White;
-        botaoMatrix[2][2] = Button13White;
-        botaoMatrix[2][3] = Button14White;
-//		botaoMatrix[2][4] = (Button15White;;
-        botaoMatrix[3][0] = Button15Red;
-        botaoMatrix[3][1] = Button16Red;
-        botaoMatrix[3][2] = Button17Red;
-        botaoMatrix[3][3] = Button18Red;
-        botaoMatrix[3][4] = Button19Red;
-        botaoMatrix[4][0] = Button20Red;
-        botaoMatrix[4][1] = Button21Red;
-        botaoMatrix[4][2] = Button22Red;
-        botaoMatrix[4][3] = Button23Red;
-        botaoMatrix[4][4] = Button24Red;
+	RandomPlacement random = new RandomPlacement();
+	ButtManager manager = new ButtManager();
+
+	/**
+	 * This method is called from within the constructor to initialize the form.
+	 * WARNING: Do NOT modify this code. The content of this method is always
+	 * regenerated by the Form Editor.
+	 */
+	// + 110 X ------------ + 104 Y
+	private void setButtonsToMatrix() {
+		botaoMatrix[0][0] = Button1Blue;
+		botaoMatrix[0][1] = Button2Blue;
+		botaoMatrix[0][2] = Button3Blue;
+		botaoMatrix[0][3] = Button4Blue;
+		botaoMatrix[0][4] = Button5Blue;
+		botaoMatrix[1][0] = Button6Blue;
+		botaoMatrix[1][1] = Button7Blue;
+		botaoMatrix[1][2] = Button8Blue;
+		botaoMatrix[1][3] = Button9Blue;
+		botaoMatrix[1][4] = Button10Blue;
+		botaoMatrix[2][0] = Button11White;
+		botaoMatrix[2][1] = Button12White;
+		botaoMatrix[2][2] = Button13White;
+		botaoMatrix[2][3] = Button14White;
+//		botaoMatrix[2][4] = (Button15White;
+		botaoMatrix[3][0] = Button15Red;
+		botaoMatrix[3][1] = Button16Red;
+		botaoMatrix[3][2] = Button17Red;
+		botaoMatrix[3][3] = Button18Red;
+		botaoMatrix[3][4] = Button19Red;
+		botaoMatrix[4][0] = Button20Red;
+		botaoMatrix[4][1] = Button21Red;
+		botaoMatrix[4][2] = Button22Red;
+		botaoMatrix[4][3] = Button23Red;
+		botaoMatrix[4][4] = Button24Red;
 //		listaDeBotoes.add(Button25Red);
-    }
+	}
 
-    @SuppressWarnings("unchecked")
+	@SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -521,62 +557,61 @@ public class TabuleiroRandom1 extends javax.swing.JFrame {
 
     }//GEN-LAST:event_Button1BlueActionPerformed
 
-    public JButton getButton(String local) {
-        JButton toReturn = new JButton();
+	public JButton getButton(String local) {
+		JButton toReturn = new JButton();
 
-        switch (local) {
-            case "D1" ->
-                toReturn = Button15Red;
-            case "D2" ->
-                toReturn = Button16Red;
-            case "D3" ->
-                toReturn = Button17Red;
-            case "D4" ->
-                toReturn = Button18Red;
-            case "D5" ->
-                toReturn = Button19Red;
-            case "E1" ->
-                toReturn = Button20Red;
-            case "E2" ->
-                toReturn = Button21Red;
-            case "E3" ->
-                toReturn = Button22Red;
-            case "E4" ->
-                toReturn = Button23Red;
-            case "E5" ->
-                toReturn = Button24Red;
-        }
-        return toReturn;
-    }
+		switch (local) {
+			case "D1" ->
+				toReturn = Button15Red;
+			case "D2" ->
+				toReturn = Button16Red;
+			case "D3" ->
+				toReturn = Button17Red;
+			case "D4" ->
+				toReturn = Button18Red;
+			case "D5" ->
+				toReturn = Button19Red;
+			case "E1" ->
+				toReturn = Button20Red;
+			case "E2" ->
+				toReturn = Button21Red;
+			case "E3" ->
+				toReturn = Button22Red;
+			case "E4" ->
+				toReturn = Button23Red;
+			case "E5" ->
+				toReturn = Button24Red;
+		}
+		return toReturn;
+	}
 
-    public void setButton(String local, Peças peça) {
-        JButton botao = getButton(local);
-        botao.setName(peça.getPatente());
-        botao.setIcon(new ImageIcon(peça.getIcon()));
-    }
+	public void setButton(String local, Peças peça) {
+		JButton botao = getButton(local);
+		botao.setName(peça.getPatente());
+		botao.setIcon(new ImageIcon(peça.getIcon()));
+	}
 
     private void ButtonEncerrarJogoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonEncerrarJogoActionPerformed
-        // TODO add your handling code here:
-        FinalJogoRandom fjr = new FinalJogoRandom();
-        this.dispose();
-        fjr.setVisible(true);
+		// TODO add your handling code here:
+		FinalJogoRandom fjr = new FinalJogoRandom();
+		this.dispose();
+		fjr.setVisible(true);
     }//GEN-LAST:event_ButtonEncerrarJogoActionPerformed
 
     private void readyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_readyButtonActionPerformed
 //	
-        manager.addAction(PanelTabuleiro);
-//	addAction(PanelTabuleiro);
-        setButtonsToMatrix();
-        random.RandomAIPlace(evt, buttonArrayEnemyPC);
-        random.MostrarIcones(evt, buttonArrayEnemy, false);
-        readyButton.setEnabled(false);
+		addAction(PanelTabuleiro);
+		setButtonsToMatrix();
+		random.RandomAIPlace(evt, buttonArrayEnemyPC);
+		random.MostrarIcones(evt, buttonArrayEnemy, false);
+		readyButton.setEnabled(false);
 //        random.RandomAIPlace(evt, buttonArray);
     }//GEN-LAST:event_readyButtonActionPerformed
 
     private void limparTabuleiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limparTabuleiroActionPerformed
-        // TODO add your handling code here:
-        limparBotoesTabuleiro();
-        readyButton.setEnabled(true);
+		// TODO add your handling code here:
+		limparBotoesTabuleiro();
+		readyButton.setEnabled(true);
     }//GEN-LAST:event_limparTabuleiroActionPerformed
 
     private void Button20RedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button20RedActionPerformed
@@ -584,7 +619,7 @@ public class TabuleiroRandom1 extends javax.swing.JFrame {
     }//GEN-LAST:event_Button20RedActionPerformed
 
     private void Button4BlueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button4BlueActionPerformed
-        // TODO add your handling code here:
+		// TODO add your handling code here:
     }//GEN-LAST:event_Button4BlueActionPerformed
 
     private void Button1BlueMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Button1BlueMouseClicked
@@ -604,82 +639,82 @@ public class TabuleiroRandom1 extends javax.swing.JFrame {
     }//GEN-LAST:event_Button12WhiteActionPerformed
 
     private void Button11WhiteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button11WhiteActionPerformed
-        // TODO add your handling code here:
+		// TODO add your handling code here:
     }//GEN-LAST:event_Button11WhiteActionPerformed
 
     private void Button17RedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button17RedActionPerformed
-        // TODO add your handling code here:
+		// TODO add your handling code here:
     }//GEN-LAST:event_Button17RedActionPerformed
 
     private void Button9BlueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Button9BlueActionPerformed
-        // TODO add your handling code here:
+		// TODO add your handling code here:
     }//GEN-LAST:event_Button9BlueActionPerformed
 
     private void jButtonDebugActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDebugActionPerformed
-        // TODO add your handling code here:
-        random.MostrarIcones(evt, buttonArrayEnemy, true);
-        jButtonDebug.setEnabled(false);
+		// TODO add your handling code here:
+		random.MostrarIcones(evt, buttonArrayEnemy, true);
+		jButtonDebug.setEnabled(false);
     }//GEN-LAST:event_jButtonDebugActionPerformed
 
     private void botaoDicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoDicaActionPerformed
-
+		dica = true;
     }//GEN-LAST:event_botaoDicaActionPerformed
 
-    private void limparBotoesTabuleiro() {
-        Button15Red.setIcon(null);
-        Button16Red.setIcon(null);
-        Button17Red.setIcon(null);
-        Button18Red.setIcon(null);
-        Button19Red.setIcon(null);
-        Button20Red.setIcon(null);
-        Button21Red.setIcon(null);
-        Button22Red.setIcon(null);
-        Button23Red.setIcon(null);
-        Button24Red.setIcon(null);
-    }
+	private void limparBotoesTabuleiro() {
+		Button15Red.setIcon(null);
+		Button16Red.setIcon(null);
+		Button17Red.setIcon(null);
+		Button18Red.setIcon(null);
+		Button19Red.setIcon(null);
+		Button20Red.setIcon(null);
+		Button21Red.setIcon(null);
+		Button22Red.setIcon(null);
+		Button23Red.setIcon(null);
+		Button24Red.setIcon(null);
+	}
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+	/**
+	 * @param args the command line arguments
+	 */
+	public static void main(String args[]) {
+		/* Set the Nimbus look and feel */
+		//<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+		/* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TabuleiroRandom1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TabuleiroRandom1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TabuleiroRandom1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TabuleiroRandom1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
+		 */
+		try {
+			for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+				if ("Nimbus".equals(info.getName())) {
+					javax.swing.UIManager.setLookAndFeel(info.getClassName());
+					break;
+				}
+			}
+		} catch (ClassNotFoundException ex) {
+			java.util.logging.Logger.getLogger(TabuleiroRandom1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+		} catch (InstantiationException ex) {
+			java.util.logging.Logger.getLogger(TabuleiroRandom1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+		} catch (IllegalAccessException ex) {
+			java.util.logging.Logger.getLogger(TabuleiroRandom1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+		} catch (javax.swing.UnsupportedLookAndFeelException ex) {
+			java.util.logging.Logger.getLogger(TabuleiroRandom1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+		}
+		//</editor-fold>
+		//</editor-fold>
+		//</editor-fold>
+		//</editor-fold>
+		//</editor-fold>
+		//</editor-fold>
+		//</editor-fold>
+		//</editor-fold>
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new TabuleiroRandom1().setVisible(true);
-            }
-        });
+		/* Create and display the form */
+		java.awt.EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				new TabuleiroRandom1().setVisible(true);
+			}
+		});
 
-    }
+	}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Button10Blue;
