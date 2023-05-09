@@ -868,7 +868,6 @@ public class TabuleiroSet extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton26ActionPerformed
 
     private void readyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_readyButtonActionPerformed
-
         botaoDica.setEnabled(true);
         manager.addAction(PanelTabuleiro);
 //	addAction(PanelTabuleiro);
